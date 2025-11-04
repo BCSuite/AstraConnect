@@ -1,0 +1,1901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA3393782EABB423001978FA /* ACSolanaInstructionReturnData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393772EABB423001978FA /* ACSolanaInstructionReturnData.swift */; };
+		DA33937A2EABB498001978FA /* ACSolanaLoadedAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393792EABB498001978FA /* ACSolanaLoadedAddresses.swift */; };
+		DA33937C2EABB4DF001978FA /* ACSolanaInnerInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33937B2EABB4DF001978FA /* ACSolanaInnerInstructions.swift */; };
+		DA33937E2EABB52A001978FA /* ACSolanaInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33937D2EABB52A001978FA /* ACSolanaInstruction.swift */; };
+		DA3393802EABB57D001978FA /* ACSolanaTxReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33937F2EABB57D001978FA /* ACSolanaTxReward.swift */; };
+		DA3393822EABB5D5001978FA /* ACSolanaTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393812EABB5D5001978FA /* ACSolanaTokenBalance.swift */; };
+		DA3393842EABB608001978FA /* ACSolanaUiTokenAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393832EABB608001978FA /* ACSolanaUiTokenAmount.swift */; };
+		DA3393862EABB641001978FA /* ACSolanaTxStatusMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393852EABB641001978FA /* ACSolanaTxStatusMetadata.swift */; };
+		DA3393882EABB674001978FA /* ACSolanaAddressTableLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393872EABB674001978FA /* ACSolanaAddressTableLookup.swift */; };
+		DA33938A2EABB777001978FA /* ACSolanaTxRequirementHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393892EABB777001978FA /* ACSolanaTxRequirementHeader.swift */; };
+		DA33938C2EABB7AC001978FA /* ACSolansTxMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33938B2EABB7AC001978FA /* ACSolansTxMessage.swift */; };
+		DA33938E2EABB7E0001978FA /* ACSolanaTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33938D2EABB7E0001978FA /* ACSolanaTx.swift */; };
+		DA3393902EABB835001978FA /* ACSolanaAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33938F2EABB835001978FA /* ACSolanaAccountInfo.swift */; };
+		DA3393922EABB90C001978FA /* ACSolanaDataSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393912EABB90C001978FA /* ACSolanaDataSlice.swift */; };
+		DA3393942EABBC23001978FA /* ACSolanaGetBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393932EABBC23001978FA /* ACSolanaGetBlocks.swift */; };
+		DA3393962EADFAD0001978FA /* ACSolanaLimitedSlotRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393952EADFAD0001978FA /* ACSolanaLimitedSlotRange.swift */; };
+		DA3393A92EAE1E9C001978FA /* ACSolanaGetBlockTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393A82EAE1E9C001978FA /* ACSolanaGetBlockTime.swift */; };
+		DA3393AB2EAE2608001978FA /* ACSolanaGetClusterNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393AA2EAE2608001978FA /* ACSolanaGetClusterNodes.swift */; };
+		DA3393AD2EAE2677001978FA /* ACSolanaClusterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393AC2EAE2677001978FA /* ACSolanaClusterNode.swift */; };
+		DA3393AF2EB0E9C5001978FA /* ACSolanaEpochInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393AE2EB0E9C5001978FA /* ACSolanaEpochInfo.swift */; };
+		DA3393B12EB0F17B001978FA /* ACSolanaGetEpochInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393B02EB0F17B001978FA /* ACSolanaGetEpochInfo.swift */; };
+		DA3393CA2EB101D1001978FA /* ACSolanaBasicOptionalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393C92EB101D1001978FA /* ACSolanaBasicOptionalParams.swift */; };
+		DA3393D92EB103EA001978FA /* ACSolanaEpochScheduleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393D62EB103EA001978FA /* ACSolanaEpochScheduleInformation.swift */; };
+		DA3393DA2EB103EA001978FA /* ACSolanaGetEpochSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393D72EB103EA001978FA /* ACSolanaGetEpochSchedule.swift */; };
+		DA3393DD2EB1045F001978FA /* ACSolanaGetFeeForMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393DC2EB1045F001978FA /* ACSolanaGetFeeForMessage.swift */; };
+		DA3393DF2EB1AC2B001978FA /* ACSolanaGetFirstAvailableBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393DE2EB1AC2B001978FA /* ACSolanaGetFirstAvailableBlock.swift */; };
+		DA3393E22EB1B6F0001978FA /* ACSolanaGetGenesisHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393E12EB1B6F0001978FA /* ACSolanaGetGenesisHash.swift */; };
+		DA3393E52EB20492001978FA /* ACSolanaGetHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393E42EB20492001978FA /* ACSolanaGetHealth.swift */; };
+		DA3393E82EB20C95001978FA /* ACSolanaSnapshotSlotInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393E72EB20C95001978FA /* ACSolanaSnapshotSlotInfo.swift */; };
+		DA3393EA2EB20D68001978FA /* ACSolanaCommitments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393E92EB20D68001978FA /* ACSolanaCommitments.swift */; };
+		DA3393EC2EB20F3D001978FA /* ACSolanaGetHighestSnapshotSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393EB2EB20F3D001978FA /* ACSolanaGetHighestSnapshotSlot.swift */; };
+		DA3393EF2EB2155B001978FA /* ACSolanaCoreVersionKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393EE2EB2155B001978FA /* ACSolanaCoreVersionKind.swift */; };
+		DA3393F22EB21889001978FA /* ACSolanaNodeIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393F12EB21889001978FA /* ACSolanaNodeIdentity.swift */; };
+		DA3393F42EB218FF001978FA /* ACSolanaGetIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393F32EB218FF001978FA /* ACSolanaGetIdentity.swift */; };
+		DA3393F72EB21C5D001978FA /* ACSolanaInflationGovernor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393F62EB21C5D001978FA /* ACSolanaInflationGovernor.swift */; };
+		DA3393F92EB21DA2001978FA /* ACSolanaGetInflationGovernor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393F82EB21DA2001978FA /* ACSolanaGetInflationGovernor.swift */; };
+		DA3393FB2EB23F9B001978FA /* ACSolanaInflationRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393FA2EB23F9B001978FA /* ACSolanaInflationRate.swift */; };
+		DA3393FD2EB2406E001978FA /* ACSolanaGetInflationRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393FC2EB2406E001978FA /* ACSolanaGetInflationRate.swift */; };
+		DA3393FF2EB24466001978FA /* ACSolanaInflationReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3393FE2EB24466001978FA /* ACSolanaInflationReward.swift */; };
+		DA3394012EB245CA001978FA /* ACSolanaGetInflationReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394002EB245CA001978FA /* ACSolanaGetInflationReward.swift */; };
+		DA3394032EB2FE19001978FA /* ACSolanaGetLargestAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394022EB2FE19001978FA /* ACSolanaGetLargestAccounts.swift */; };
+		DA3394062EB30AEA001978FA /* ACSolanaLatestBlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394052EB30AEA001978FA /* ACSolanaLatestBlockInfo.swift */; };
+		DA3394082EB30C2E001978FA /* ACSolanaGetLatestBlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394072EB30C2E001978FA /* ACSolanaGetLatestBlockInfo.swift */; };
+		DA33940B2EB31161001978FA /* ACSolanaGetLeaderSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33940A2EB31161001978FA /* ACSolanaGetLeaderSchedule.swift */; };
+		DA33940E2EB34487001978FA /* ACSolanaGetMaxRetransmitSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33940D2EB34487001978FA /* ACSolanaGetMaxRetransmitSlot.swift */; };
+		DA3394102EB34818001978FA /* ACSolanaGetMaxShredInsertSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33940F2EB34818001978FA /* ACSolanaGetMaxShredInsertSlot.swift */; };
+		DA3394122EB34AD6001978FA /* ACSolanaGetMinBalanceForRentExemption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394112EB34AD6001978FA /* ACSolanaGetMinBalanceForRentExemption.swift */; };
+		DA3394142EB35432001978FA /* ACSolanaAccountOptionalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394132EB35432001978FA /* ACSolanaAccountOptionalParams.swift */; };
+		DA3394162EB35478001978FA /* ACSolanaGetMultipleAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394152EB35478001978FA /* ACSolanaGetMultipleAccounts.swift */; };
+		DA3394192EB362A9001978FA /* ACSolanaDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394182EB362A9001978FA /* ACSolanaDataFilter.swift */; };
+		DA33941B2EB36503001978FA /* ACSolanaProgramAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33941A2EB36503001978FA /* ACSolanaProgramAccountInfo.swift */; };
+		DA33941D2EB3664B001978FA /* ACSolanaGetProgramAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33941C2EB3664B001978FA /* ACSolanaGetProgramAccounts.swift */; };
+		DA3394202EB44DC9001978FA /* ACSolanaPerformanceSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33941F2EB44DC9001978FA /* ACSolanaPerformanceSample.swift */; };
+		DA3394222EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394212EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift */; };
+		DA3394242EB4559F001978FA /* ACSolanaPrioritizationFeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394232EB4559F001978FA /* ACSolanaPrioritizationFeeInfo.swift */; };
+		DA3394262EB45693001978FA /* ACSolanaGetRecentPrioritizationFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394252EB45693001978FA /* ACSolanaGetRecentPrioritizationFees.swift */; };
+		DA3394292EB498F4001978FA /* ACSolanaSignatureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394282EB498F4001978FA /* ACSolanaSignatureInfo.swift */; };
+		DA33942B2EB49B5A001978FA /* ACSolanaGetSignaturesForAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33942A2EB49B5A001978FA /* ACSolanaGetSignaturesForAddress.swift */; };
+		DA33942D2EB4A852001978FA /* ACSolanaSignatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33942C2EB4A852001978FA /* ACSolanaSignatureStatus.swift */; };
+		DA33942F2EB4A948001978FA /* ACSolanaTxStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33942E2EB4A948001978FA /* ACSolanaTxStatus.swift */; };
+		DA3394312EB4ADA3001978FA /* ACSolanaGetSignatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394302EB4ADA3001978FA /* ACSolanaGetSignatureStatuses.swift */; };
+		DA3394332EB4B460001978FA /* ACSolanaUniRespResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394322EB4B460001978FA /* ACSolanaUniRespResult.swift */; };
+		DA3394352EB4BA1B001978FA /* ACSolanaGetSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394342EB4BA1B001978FA /* ACSolanaGetSlot.swift */; };
+		DA3394372EB4BC3C001978FA /* ACSolanaGetSlotLeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394362EB4BC3C001978FA /* ACSolanaGetSlotLeader.swift */; };
+		DA3394392EB4BE25001978FA /* ACSolanaGetSlotLeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394382EB4BE25001978FA /* ACSolanaGetSlotLeaders.swift */; };
+		DA33943C2EB4C1A9001978FA /* ACSolanaGetStakeMinimumDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33943B2EB4C1A9001978FA /* ACSolanaGetStakeMinimumDelegation.swift */; };
+		DA3394502EB4E1EB001978FA /* ACSolanaSupplyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33944F2EB4E1EB001978FA /* ACSolanaSupplyInfo.swift */; };
+		DA3394522EB4E2DD001978FA /* ACSolanaGetSupply.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394512EB4E2DD001978FA /* ACSolanaGetSupply.swift */; };
+		DA3394542EB4E6E7001978FA /* ACSolanaTokenAccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394532EB4E6E7001978FA /* ACSolanaTokenAccountBalance.swift */; };
+		DA3394562EB4E921001978FA /* ACSolanaGetTokenAccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394552EB4E921001978FA /* ACSolanaGetTokenAccountBalance.swift */; };
+		DA3394582EB4F13A001978FA /* ACSolanaGetTokenAccountsByDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394572EB4F13A001978FA /* ACSolanaGetTokenAccountsByDelegate.swift */; };
+		DA33945C2EB632B9001978FA /* ACSolanaGetTokenAccountsByOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33945B2EB632B9001978FA /* ACSolanaGetTokenAccountsByOwner.swift */; };
+		DA33945E2EB63308001978FA /* ACSolanaTokenAccountOwnershipParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33945D2EB63308001978FA /* ACSolanaTokenAccountOwnershipParams.swift */; };
+		DA3394602EB63621001978FA /* ACSolanaTokenAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33945F2EB63621001978FA /* ACSolanaTokenAccountInfo.swift */; };
+		DA3394622EB637FD001978FA /* ACSolanaGetTokenLargestAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394612EB637FD001978FA /* ACSolanaGetTokenLargestAccounts.swift */; };
+		DA3394642EB63BB1001978FA /* ACSolanaGetTokenSupply.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394632EB63BB1001978FA /* ACSolanaGetTokenSupply.swift */; };
+		DA3394662EB63C69001978FA /* ACSolanaTokenSupplyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394652EB63C69001978FA /* ACSolanaTokenSupplyInfo.swift */; };
+		DA3394682EB63FAC001978FA /* ACSolanaGetTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394672EB63FAC001978FA /* ACSolanaGetTransaction.swift */; };
+		DA33946A2EB64213001978FA /* ACSolanaTxDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394692EB64213001978FA /* ACSolanaTxDetails.swift */; };
+		DA33946D2EB65162001978FA /* ACSolanaGetVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33946C2EB65162001978FA /* ACSolanaGetVersion.swift */; };
+		DA33946F2EB651AA001978FA /* ACSolanaNodeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33946E2EB651AA001978FA /* ACSolanaNodeVersion.swift */; };
+		DA3394712EB65571001978FA /* ACSolanaVoteAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394702EB65571001978FA /* ACSolanaVoteAccountInfo.swift */; };
+		DA3394732EB6F35C001978FA /* ACSolanaGetVoteAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394722EB6F35C001978FA /* ACSolanaGetVoteAccounts.swift */; };
+		DA3394752EB70321001978FA /* ACSolanaIsBlockhashValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394742EB70321001978FA /* ACSolanaIsBlockhashValid.swift */; };
+		DA3394772EB73688001978FA /* ACSolanaGetMinimumLedgerSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394762EB73688001978FA /* ACSolanaGetMinimumLedgerSlot.swift */; };
+		DA33947A2EB738D8001978FA /* ACSolanaRequestAirdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394792EB738D8001978FA /* ACSolanaRequestAirdrop.swift */; };
+		DA33947C2EB73D89001978FA /* ACSolanaSendTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947B2EB73D89001978FA /* ACSolanaSendTransaction.swift */; };
+		DA33947E2EB75393001978FA /* ACSolanasimulationTxInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947D2EB75393001978FA /* ACSolanasimulationTxInfo.swift */; };
+		DA3394802EB755BC001978FA /* ACSolanaSimulateTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947F2EB755BC001978FA /* ACSolanaSimulateTransaction.swift */; };
+		DA33948F2EB76209001978FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3394872EB76209001978FA /* Preview Assets.xcassets */; };
+		DA3394902EB76209001978FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA33948D2EB76209001978FA /* Assets.xcassets */; };
+		DA3394912EB76209001978FA /* ChainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33948A2EB76209001978FA /* ChainListView.swift */; };
+		DA3394922EB76209001978FA /* SolanaRPCAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */; };
+		DA3394932EB76209001978FA /* AstractConnectExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */; };
+		DA3394982EB79F8C001978FA /* ACRPCResponsive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394972EB79F8C001978FA /* ACRPCResponsive.swift */; };
+		DA33949A2EB7A359001978FA /* ACSolanaJSONRPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394992EB7A359001978FA /* ACSolanaJSONRPCError.swift */; };
+		DA33949C2EB841BF001978FA /* ACRPCResponseBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33949B2EB841BF001978FA /* ACRPCResponseBuildable.swift */; };
+		DA33949E2EB84279001978FA /* ACSolanaJSONRPCResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33949D2EB84279001978FA /* ACSolanaJSONRPCResponseBuilder.swift */; };
+		DA3394A02EB84383001978FA /* ACSolanaResponsiveDefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33949F2EB84383001978FA /* ACSolanaResponsiveDefaultFactory.swift */; };
+		DA3394A22EB846F5001978FA /* ACRPCResponsiveGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394A12EB846F5001978FA /* ACRPCResponsiveGeneratable.swift */; };
+		DA3394A42EB88F3A001978FA /* ACRequestDataStreamAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394A32EB88F3A001978FA /* ACRequestDataStreamAssociation.swift */; };
+		DA3394A62EB8AFB6001978FA /* ACSolanaGetTransactionCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394A52EB8AFB6001978FA /* ACSolanaGetTransactionCount.swift */; };
+		DA3394A82EB8B266001978FA /* ACSolanaRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394A72EB8B266001978FA /* ACSolanaRequestBuildable.swift */; };
+		DA3394AA2EB8B2AD001978FA /* ACRPCRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394A92EB8B2AD001978FA /* ACRPCRequestBuildable.swift */; };
+		DA3394AC2EB8B54A001978FA /* ACRPCReqBuilderGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394AB2EB8B54A001978FA /* ACRPCReqBuilderGeneratable.swift */; };
+		DA3394AE2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394AD2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift */; };
+		DA3394B02EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394AF2EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift */; };
+		DA3394B22EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394B12EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift */; };
+		DA404B302EA9CEFC00F2FA12 /* ACDynamicCodation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B2F2EA9CEFC00F2FA12 /* ACDynamicCodation.swift */; };
+		DA404B322EAA285D00F2FA12 /* ACSolanaGetBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B312EAA285D00F2FA12 /* ACSolanaGetBlock.swift */; };
+		DA404B892EAB624500F2FA12 /* ACSolanaGetBlockCommitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B882EAB624400F2FA12 /* ACSolanaGetBlockCommitment.swift */; };
+		DA404B8B2EAB7C5B00F2FA12 /* ACSolanaGetBlockHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B8A2EAB7C5B00F2FA12 /* ACSolanaGetBlockHeight.swift */; };
+		DA404B8D2EAB84D100F2FA12 /* ACSolanaSlotRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B8C2EAB84D100F2FA12 /* ACSolanaSlotRange.swift */; };
+		DA404B8F2EAB860B00F2FA12 /* ACSolanaGetBlockProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B8E2EAB860B00F2FA12 /* ACSolanaGetBlockProduction.swift */; };
+		DA404B912EAB88A900F2FA12 /* ACSolanaRPCContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B902EAB88A900F2FA12 /* ACSolanaRPCContext.swift */; };
+		DA404B932EAB8A9600F2FA12 /* ACSolanaProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B922EAB8A9600F2FA12 /* ACSolanaProduction.swift */; };
+		DA861BD92EA531B000C50B77 /* AstraConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */; };
+		DA861BFF2EA5DA9300C50B77 /* AstraConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = DA861BFC2EA5DA9300C50B77 /* AstraConnect.h */; };
+		DA861C002EA5DA9300C50B77 /* ACRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861BF92EA5DA9300C50B77 /* ACRequestable.swift */; };
+		DA861C012EA5DA9300C50B77 /* AstraConnect.docc in Sources */ = {isa = PBXBuildFile; fileRef = DA861BFD2EA5DA9300C50B77 /* AstraConnect.docc */; };
+		DA861C022EA5DA9300C50B77 /* ACRequestWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861BFA2EA5DA9300C50B77 /* ACRequestWay.swift */; };
+		DA861C052EA5DADE00C50B77 /* ACRPCPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861C042EA5DADE00C50B77 /* ACRPCPresentable.swift */; };
+		DA861C0B2EA5E14D00C50B77 /* ACRequestCapability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861C0A2EA5E14D00C50B77 /* ACRequestCapability.swift */; };
+		DA861C0D2EA5E31400C50B77 /* URLSessionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861C0C2EA5E31400C50B77 /* URLSessionRequester.swift */; };
+		DA861C0F2EA5E49D00C50B77 /* ACPOSTRequestWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861C0E2EA5E49D00C50B77 /* ACPOSTRequestWay.swift */; };
+		DAD15C5C2EA6197500868987 /* ACRequestSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C5B2EA6197500868987 /* ACRequestSpace.swift */; };
+		DAD15C5E2EA61BEB00868987 /* ACHTTPContentFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C5D2EA61BEB00868987 /* ACHTTPContentFormattable.swift */; };
+		DAD15C602EA61D2400868987 /* ACJSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C5F2EA61D2400868987 /* ACJSONFormatter.swift */; };
+		DAD15C962EA66D3B00868987 /* ACURLRequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C952EA66D3B00868987 /* ACURLRequestBuildable.swift */; };
+		DAD15C982EA66E9F00868987 /* ACPOSTURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C972EA66E9F00868987 /* ACPOSTURLRequestBuilder.swift */; };
+		DAD15C9B2EA672B300868987 /* ACError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C9A2EA672B300868987 /* ACError.swift */; };
+		DAD15C9D2EA674C600868987 /* ACRPCProcessErrorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C9C2EA674C600868987 /* ACRPCProcessErrorKind.swift */; };
+		DAD15CA02EA67DF600868987 /* ACDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15C9F2EA67DF600868987 /* ACDecodable.swift */; };
+		DAD15CA22EA67F6300868987 /* ACJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CA12EA67F6300868987 /* ACJSONDecoder.swift */; };
+		DAD15CA42EA72CD200868987 /* ACURLRequestBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CA32EA72CD200868987 /* ACURLRequestBuilderFactory.swift */; };
+		DAD15CA72EA7365100868987 /* ACRPCDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CA62EA7365100868987 /* ACRPCDataRepresentable.swift */; };
+		DAD15CA92EA7383100868987 /* ACRPCJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CA82EA7383100868987 /* ACRPCJSONData.swift */; };
+		DAD15CAB2EA766A400868987 /* ACURLRequestBuilderGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CAA2EA766A400868987 /* ACURLRequestBuilderGeneratable.swift */; };
+		DAD15CAD2EA76B7E00868987 /* ACDecoderGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CAC2EA76B7E00868987 /* ACDecoderGeneratable.swift */; };
+		DAD15CAF2EA76DA400868987 /* ACDecoderDefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CAE2EA76DA400868987 /* ACDecoderDefaultFactory.swift */; };
+		DAD15CB52EA77F8E00868987 /* ACHTTPContentFormatterGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CB42EA77F8E00868987 /* ACHTTPContentFormatterGeneratable.swift */; };
+		DAD15CB72EA7809100868987 /* ACHTTPContentFormatterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CB62EA7809100868987 /* ACHTTPContentFormatterFactory.swift */; };
+		DAD15CBB2EA7852B00868987 /* ACChainInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CBA2EA7852B00868987 /* ACChainInteractable.swift */; };
+		DAD15CBD2EA7864E00868987 /* ACSolanaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CBC2EA7864E00868987 /* ACSolanaInteractor.swift */; };
+		DAD15CC12EA7895F00868987 /* ACSolanaRequestSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC02EA7895F00868987 /* ACSolanaRequestSpace.swift */; };
+		DAD15CC32EA78C5A00868987 /* ACSolanaJSONRPCRequestPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC22EA78C5A00868987 /* ACSolanaJSONRPCRequestPayload.swift */; };
+		DAD15CC52EA7913E00868987 /* ACSolanaJSONRPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC42EA7913E00868987 /* ACSolanaJSONRPCRequest.swift */; };
+		DAD15CC72EA792CB00868987 /* ACSolanaRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC62EA792CB00868987 /* ACSolanaRPC.swift */; };
+		DAD15CC92EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC82EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift */; };
+		DAD15CCB2EA7C34900868987 /* ACSolanaGetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CCA2EA7C34900868987 /* ACSolanaGetBalance.swift */; };
+		DAD15CCD2EA7C89800868987 /* ACSolanaRPCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CCC2EA7C89800868987 /* ACSolanaRPCAPI.swift */; };
+		DAD15CFD2EA7CEF100868987 /* AstraConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */; };
+		DAD15CFE2EA7CEF100868987 /* AstraConnect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAD15D032EA7DD2400868987 /* ACEncoderGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D022EA7DD2400868987 /* ACEncoderGeneratable.swift */; };
+		DAD15D052EA7DD9300868987 /* ACEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D042EA7DD9300868987 /* ACEncodable.swift */; };
+		DAD15D072EA7DE5900868987 /* ACJSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D062EA7DE5900868987 /* ACJSONCoder.swift */; };
+		DAD15D092EA7DF1500868987 /* ACCoderDefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D082EA7DF1500868987 /* ACCoderDefaultFactory.swift */; };
+		DAD15D0C2EA8BFA800868987 /* ACLoggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D0B2EA8BFA800868987 /* ACLoggable.swift */; };
+		DAD15D0E2EA8C10A00868987 /* ACConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D0D2EA8C10A00868987 /* ACConsoleLogger.swift */; };
+		DAD15D142EA8D60F00868987 /* ACSolanaGetAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D132EA8D60F00868987 /* ACSolanaGetAccountInfo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA861BDA2EA531B000C50B77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA861BC52EA531B000C50B77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA861BCD2EA531B000C50B77;
+			remoteInfo = AstraConnect;
+		};
+		DAD15CE22EA7CEC200868987 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA861BC52EA531B000C50B77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD15CD12EA7CEC100868987;
+			remoteInfo = AstractConnectExample;
+		};
+		DAD15CEC2EA7CEC200868987 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA861BC52EA531B000C50B77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD15CD12EA7CEC100868987;
+			remoteInfo = AstractConnectExample;
+		};
+		DAD15CFF2EA7CEF100868987 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA861BC52EA531B000C50B77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA861BCD2EA531B000C50B77;
+			remoteInfo = AstraConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DAD15D012EA7CEF100868987 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DAD15CFE2EA7CEF100868987 /* AstraConnect.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DA3393772EABB423001978FA /* ACSolanaInstructionReturnData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInstructionReturnData.swift; sourceTree = "<group>"; };
+		DA3393792EABB498001978FA /* ACSolanaLoadedAddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaLoadedAddresses.swift; sourceTree = "<group>"; };
+		DA33937B2EABB4DF001978FA /* ACSolanaInnerInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInnerInstructions.swift; sourceTree = "<group>"; };
+		DA33937D2EABB52A001978FA /* ACSolanaInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInstruction.swift; sourceTree = "<group>"; };
+		DA33937F2EABB57D001978FA /* ACSolanaTxReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTxReward.swift; sourceTree = "<group>"; };
+		DA3393812EABB5D5001978FA /* ACSolanaTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTokenBalance.swift; sourceTree = "<group>"; };
+		DA3393832EABB608001978FA /* ACSolanaUiTokenAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaUiTokenAmount.swift; sourceTree = "<group>"; };
+		DA3393852EABB641001978FA /* ACSolanaTxStatusMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTxStatusMetadata.swift; sourceTree = "<group>"; };
+		DA3393872EABB674001978FA /* ACSolanaAddressTableLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaAddressTableLookup.swift; sourceTree = "<group>"; };
+		DA3393892EABB777001978FA /* ACSolanaTxRequirementHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTxRequirementHeader.swift; sourceTree = "<group>"; };
+		DA33938B2EABB7AC001978FA /* ACSolansTxMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolansTxMessage.swift; sourceTree = "<group>"; };
+		DA33938D2EABB7E0001978FA /* ACSolanaTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTx.swift; sourceTree = "<group>"; };
+		DA33938F2EABB835001978FA /* ACSolanaAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaAccountInfo.swift; sourceTree = "<group>"; };
+		DA3393912EABB90C001978FA /* ACSolanaDataSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaDataSlice.swift; sourceTree = "<group>"; };
+		DA3393932EABBC23001978FA /* ACSolanaGetBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlocks.swift; sourceTree = "<group>"; };
+		DA3393952EADFAD0001978FA /* ACSolanaLimitedSlotRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaLimitedSlotRange.swift; sourceTree = "<group>"; };
+		DA3393A82EAE1E9C001978FA /* ACSolanaGetBlockTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlockTime.swift; sourceTree = "<group>"; };
+		DA3393AA2EAE2608001978FA /* ACSolanaGetClusterNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetClusterNodes.swift; sourceTree = "<group>"; };
+		DA3393AC2EAE2677001978FA /* ACSolanaClusterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaClusterNode.swift; sourceTree = "<group>"; };
+		DA3393AE2EB0E9C5001978FA /* ACSolanaEpochInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaEpochInfo.swift; sourceTree = "<group>"; };
+		DA3393B02EB0F17B001978FA /* ACSolanaGetEpochInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetEpochInfo.swift; sourceTree = "<group>"; };
+		DA3393C92EB101D1001978FA /* ACSolanaBasicOptionalParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaBasicOptionalParams.swift; sourceTree = "<group>"; };
+		DA3393D62EB103EA001978FA /* ACSolanaEpochScheduleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaEpochScheduleInformation.swift; sourceTree = "<group>"; };
+		DA3393D72EB103EA001978FA /* ACSolanaGetEpochSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetEpochSchedule.swift; sourceTree = "<group>"; };
+		DA3393DC2EB1045F001978FA /* ACSolanaGetFeeForMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetFeeForMessage.swift; sourceTree = "<group>"; };
+		DA3393DE2EB1AC2B001978FA /* ACSolanaGetFirstAvailableBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetFirstAvailableBlock.swift; sourceTree = "<group>"; };
+		DA3393E12EB1B6F0001978FA /* ACSolanaGetGenesisHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetGenesisHash.swift; sourceTree = "<group>"; };
+		DA3393E42EB20492001978FA /* ACSolanaGetHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetHealth.swift; sourceTree = "<group>"; };
+		DA3393E72EB20C95001978FA /* ACSolanaSnapshotSlotInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSnapshotSlotInfo.swift; sourceTree = "<group>"; };
+		DA3393E92EB20D68001978FA /* ACSolanaCommitments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaCommitments.swift; sourceTree = "<group>"; };
+		DA3393EB2EB20F3D001978FA /* ACSolanaGetHighestSnapshotSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetHighestSnapshotSlot.swift; sourceTree = "<group>"; };
+		DA3393EE2EB2155B001978FA /* ACSolanaCoreVersionKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaCoreVersionKind.swift; sourceTree = "<group>"; };
+		DA3393F12EB21889001978FA /* ACSolanaNodeIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaNodeIdentity.swift; sourceTree = "<group>"; };
+		DA3393F32EB218FF001978FA /* ACSolanaGetIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetIdentity.swift; sourceTree = "<group>"; };
+		DA3393F62EB21C5D001978FA /* ACSolanaInflationGovernor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInflationGovernor.swift; sourceTree = "<group>"; };
+		DA3393F82EB21DA2001978FA /* ACSolanaGetInflationGovernor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetInflationGovernor.swift; sourceTree = "<group>"; };
+		DA3393FA2EB23F9B001978FA /* ACSolanaInflationRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInflationRate.swift; sourceTree = "<group>"; };
+		DA3393FC2EB2406E001978FA /* ACSolanaGetInflationRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetInflationRate.swift; sourceTree = "<group>"; };
+		DA3393FE2EB24466001978FA /* ACSolanaInflationReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInflationReward.swift; sourceTree = "<group>"; };
+		DA3394002EB245CA001978FA /* ACSolanaGetInflationReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetInflationReward.swift; sourceTree = "<group>"; };
+		DA3394022EB2FE19001978FA /* ACSolanaGetLargestAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetLargestAccounts.swift; sourceTree = "<group>"; };
+		DA3394052EB30AEA001978FA /* ACSolanaLatestBlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaLatestBlockInfo.swift; sourceTree = "<group>"; };
+		DA3394072EB30C2E001978FA /* ACSolanaGetLatestBlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetLatestBlockInfo.swift; sourceTree = "<group>"; };
+		DA33940A2EB31161001978FA /* ACSolanaGetLeaderSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetLeaderSchedule.swift; sourceTree = "<group>"; };
+		DA33940D2EB34487001978FA /* ACSolanaGetMaxRetransmitSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetMaxRetransmitSlot.swift; sourceTree = "<group>"; };
+		DA33940F2EB34818001978FA /* ACSolanaGetMaxShredInsertSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetMaxShredInsertSlot.swift; sourceTree = "<group>"; };
+		DA3394112EB34AD6001978FA /* ACSolanaGetMinBalanceForRentExemption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetMinBalanceForRentExemption.swift; sourceTree = "<group>"; };
+		DA3394132EB35432001978FA /* ACSolanaAccountOptionalParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaAccountOptionalParams.swift; sourceTree = "<group>"; };
+		DA3394152EB35478001978FA /* ACSolanaGetMultipleAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetMultipleAccounts.swift; sourceTree = "<group>"; };
+		DA3394182EB362A9001978FA /* ACSolanaDataFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaDataFilter.swift; sourceTree = "<group>"; };
+		DA33941A2EB36503001978FA /* ACSolanaProgramAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaProgramAccountInfo.swift; sourceTree = "<group>"; };
+		DA33941C2EB3664B001978FA /* ACSolanaGetProgramAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetProgramAccounts.swift; sourceTree = "<group>"; };
+		DA33941F2EB44DC9001978FA /* ACSolanaPerformanceSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaPerformanceSample.swift; sourceTree = "<group>"; };
+		DA3394212EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetRecentPerformanceSamples.swift; sourceTree = "<group>"; };
+		DA3394232EB4559F001978FA /* ACSolanaPrioritizationFeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaPrioritizationFeeInfo.swift; sourceTree = "<group>"; };
+		DA3394252EB45693001978FA /* ACSolanaGetRecentPrioritizationFees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetRecentPrioritizationFees.swift; sourceTree = "<group>"; };
+		DA3394282EB498F4001978FA /* ACSolanaSignatureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSignatureInfo.swift; sourceTree = "<group>"; };
+		DA33942A2EB49B5A001978FA /* ACSolanaGetSignaturesForAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSignaturesForAddress.swift; sourceTree = "<group>"; };
+		DA33942C2EB4A852001978FA /* ACSolanaSignatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSignatureStatus.swift; sourceTree = "<group>"; };
+		DA33942E2EB4A948001978FA /* ACSolanaTxStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTxStatus.swift; sourceTree = "<group>"; };
+		DA3394302EB4ADA3001978FA /* ACSolanaGetSignatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSignatureStatuses.swift; sourceTree = "<group>"; };
+		DA3394322EB4B460001978FA /* ACSolanaUniRespResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaUniRespResult.swift; sourceTree = "<group>"; };
+		DA3394342EB4BA1B001978FA /* ACSolanaGetSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSlot.swift; sourceTree = "<group>"; };
+		DA3394362EB4BC3C001978FA /* ACSolanaGetSlotLeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSlotLeader.swift; sourceTree = "<group>"; };
+		DA3394382EB4BE25001978FA /* ACSolanaGetSlotLeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSlotLeaders.swift; sourceTree = "<group>"; };
+		DA33943B2EB4C1A9001978FA /* ACSolanaGetStakeMinimumDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetStakeMinimumDelegation.swift; sourceTree = "<group>"; };
+		DA33944F2EB4E1EB001978FA /* ACSolanaSupplyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSupplyInfo.swift; sourceTree = "<group>"; };
+		DA3394512EB4E2DD001978FA /* ACSolanaGetSupply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetSupply.swift; sourceTree = "<group>"; };
+		DA3394532EB4E6E7001978FA /* ACSolanaTokenAccountBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTokenAccountBalance.swift; sourceTree = "<group>"; };
+		DA3394552EB4E921001978FA /* ACSolanaGetTokenAccountBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTokenAccountBalance.swift; sourceTree = "<group>"; };
+		DA3394572EB4F13A001978FA /* ACSolanaGetTokenAccountsByDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTokenAccountsByDelegate.swift; sourceTree = "<group>"; };
+		DA33945B2EB632B9001978FA /* ACSolanaGetTokenAccountsByOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTokenAccountsByOwner.swift; sourceTree = "<group>"; };
+		DA33945D2EB63308001978FA /* ACSolanaTokenAccountOwnershipParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTokenAccountOwnershipParams.swift; sourceTree = "<group>"; };
+		DA33945F2EB63621001978FA /* ACSolanaTokenAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTokenAccountInfo.swift; sourceTree = "<group>"; };
+		DA3394612EB637FD001978FA /* ACSolanaGetTokenLargestAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTokenLargestAccounts.swift; sourceTree = "<group>"; };
+		DA3394632EB63BB1001978FA /* ACSolanaGetTokenSupply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTokenSupply.swift; sourceTree = "<group>"; };
+		DA3394652EB63C69001978FA /* ACSolanaTokenSupplyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTokenSupplyInfo.swift; sourceTree = "<group>"; };
+		DA3394672EB63FAC001978FA /* ACSolanaGetTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTransaction.swift; sourceTree = "<group>"; };
+		DA3394692EB64213001978FA /* ACSolanaTxDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaTxDetails.swift; sourceTree = "<group>"; };
+		DA33946C2EB65162001978FA /* ACSolanaGetVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetVersion.swift; sourceTree = "<group>"; };
+		DA33946E2EB651AA001978FA /* ACSolanaNodeVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaNodeVersion.swift; sourceTree = "<group>"; };
+		DA3394702EB65571001978FA /* ACSolanaVoteAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaVoteAccountInfo.swift; sourceTree = "<group>"; };
+		DA3394722EB6F35C001978FA /* ACSolanaGetVoteAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetVoteAccounts.swift; sourceTree = "<group>"; };
+		DA3394742EB70321001978FA /* ACSolanaIsBlockhashValid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaIsBlockhashValid.swift; sourceTree = "<group>"; };
+		DA3394762EB73688001978FA /* ACSolanaGetMinimumLedgerSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetMinimumLedgerSlot.swift; sourceTree = "<group>"; };
+		DA3394792EB738D8001978FA /* ACSolanaRequestAirdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRequestAirdrop.swift; sourceTree = "<group>"; };
+		DA33947B2EB73D89001978FA /* ACSolanaSendTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSendTransaction.swift; sourceTree = "<group>"; };
+		DA33947D2EB75393001978FA /* ACSolanasimulationTxInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanasimulationTxInfo.swift; sourceTree = "<group>"; };
+		DA33947F2EB755BC001978FA /* ACSolanaSimulateTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSimulateTransaction.swift; sourceTree = "<group>"; };
+		DA3394872EB76209001978FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstractConnectExampleApp.swift; sourceTree = "<group>"; };
+		DA33948A2EB76209001978FA /* ChainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainListView.swift; sourceTree = "<group>"; };
+		DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolanaRPCAPIView.swift; sourceTree = "<group>"; };
+		DA33948D2EB76209001978FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA3394972EB79F8C001978FA /* ACRPCResponsive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCResponsive.swift; sourceTree = "<group>"; };
+		DA3394992EB7A359001978FA /* ACSolanaJSONRPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCError.swift; sourceTree = "<group>"; };
+		DA33949B2EB841BF001978FA /* ACRPCResponseBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCResponseBuildable.swift; sourceTree = "<group>"; };
+		DA33949D2EB84279001978FA /* ACSolanaJSONRPCResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCResponseBuilder.swift; sourceTree = "<group>"; };
+		DA33949F2EB84383001978FA /* ACSolanaResponsiveDefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaResponsiveDefaultFactory.swift; sourceTree = "<group>"; };
+		DA3394A12EB846F5001978FA /* ACRPCResponsiveGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCResponsiveGeneratable.swift; sourceTree = "<group>"; };
+		DA3394A32EB88F3A001978FA /* ACRequestDataStreamAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRequestDataStreamAssociation.swift; sourceTree = "<group>"; };
+		DA3394A52EB8AFB6001978FA /* ACSolanaGetTransactionCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetTransactionCount.swift; sourceTree = "<group>"; };
+		DA3394A72EB8B266001978FA /* ACSolanaRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRequestBuildable.swift; sourceTree = "<group>"; };
+		DA3394A92EB8B2AD001978FA /* ACRPCRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCRequestBuildable.swift; sourceTree = "<group>"; };
+		DA3394AB2EB8B54A001978FA /* ACRPCReqBuilderGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCReqBuilderGeneratable.swift; sourceTree = "<group>"; };
+		DA3394AD2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONReqBuilder.swift; sourceTree = "<group>"; };
+		DA3394AF2EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaReqBuilderDefaultFactory.swift; sourceTree = "<group>"; };
+		DA3394B12EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaReqDataStreamParams.swift; sourceTree = "<group>"; };
+		DA404B2F2EA9CEFC00F2FA12 /* ACDynamicCodation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDynamicCodation.swift; sourceTree = "<group>"; };
+		DA404B312EAA285D00F2FA12 /* ACSolanaGetBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlock.swift; sourceTree = "<group>"; };
+		DA404B882EAB624400F2FA12 /* ACSolanaGetBlockCommitment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlockCommitment.swift; sourceTree = "<group>"; };
+		DA404B8A2EAB7C5B00F2FA12 /* ACSolanaGetBlockHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlockHeight.swift; sourceTree = "<group>"; };
+		DA404B8C2EAB84D100F2FA12 /* ACSolanaSlotRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSlotRange.swift; sourceTree = "<group>"; };
+		DA404B8E2EAB860B00F2FA12 /* ACSolanaGetBlockProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlockProduction.swift; sourceTree = "<group>"; };
+		DA404B902EAB88A900F2FA12 /* ACSolanaRPCContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRPCContext.swift; sourceTree = "<group>"; };
+		DA404B922EAB8A9600F2FA12 /* ACSolanaProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaProduction.swift; sourceTree = "<group>"; };
+		DA861BCE2EA531B000C50B77 /* AstraConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstraConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA861BD82EA531B000C50B77 /* AstraConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstraConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA861BF92EA5DA9300C50B77 /* ACRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRequestable.swift; sourceTree = "<group>"; };
+		DA861BFA2EA5DA9300C50B77 /* ACRequestWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRequestWay.swift; sourceTree = "<group>"; };
+		DA861BFC2EA5DA9300C50B77 /* AstraConnect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AstraConnect.h; sourceTree = "<group>"; };
+		DA861BFD2EA5DA9300C50B77 /* AstraConnect.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AstraConnect.docc; sourceTree = "<group>"; };
+		DA861C042EA5DADE00C50B77 /* ACRPCPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCPresentable.swift; sourceTree = "<group>"; };
+		DA861C0A2EA5E14D00C50B77 /* ACRequestCapability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRequestCapability.swift; sourceTree = "<group>"; };
+		DA861C0C2EA5E31400C50B77 /* URLSessionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequester.swift; sourceTree = "<group>"; };
+		DA861C0E2EA5E49D00C50B77 /* ACPOSTRequestWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPOSTRequestWay.swift; sourceTree = "<group>"; };
+		DAD15C5B2EA6197500868987 /* ACRequestSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRequestSpace.swift; sourceTree = "<group>"; };
+		DAD15C5D2EA61BEB00868987 /* ACHTTPContentFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACHTTPContentFormattable.swift; sourceTree = "<group>"; };
+		DAD15C5F2EA61D2400868987 /* ACJSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACJSONFormatter.swift; sourceTree = "<group>"; };
+		DAD15C952EA66D3B00868987 /* ACURLRequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACURLRequestBuildable.swift; sourceTree = "<group>"; };
+		DAD15C972EA66E9F00868987 /* ACPOSTURLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPOSTURLRequestBuilder.swift; sourceTree = "<group>"; };
+		DAD15C9A2EA672B300868987 /* ACError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACError.swift; sourceTree = "<group>"; };
+		DAD15C9C2EA674C600868987 /* ACRPCProcessErrorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCProcessErrorKind.swift; sourceTree = "<group>"; };
+		DAD15C9F2EA67DF600868987 /* ACDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDecodable.swift; sourceTree = "<group>"; };
+		DAD15CA12EA67F6300868987 /* ACJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACJSONDecoder.swift; sourceTree = "<group>"; };
+		DAD15CA32EA72CD200868987 /* ACURLRequestBuilderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACURLRequestBuilderFactory.swift; sourceTree = "<group>"; };
+		DAD15CA62EA7365100868987 /* ACRPCDataRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCDataRepresentable.swift; sourceTree = "<group>"; };
+		DAD15CA82EA7383100868987 /* ACRPCJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCJSONData.swift; sourceTree = "<group>"; };
+		DAD15CAA2EA766A400868987 /* ACURLRequestBuilderGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACURLRequestBuilderGeneratable.swift; sourceTree = "<group>"; };
+		DAD15CAC2EA76B7E00868987 /* ACDecoderGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDecoderGeneratable.swift; sourceTree = "<group>"; };
+		DAD15CAE2EA76DA400868987 /* ACDecoderDefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDecoderDefaultFactory.swift; sourceTree = "<group>"; };
+		DAD15CB42EA77F8E00868987 /* ACHTTPContentFormatterGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACHTTPContentFormatterGeneratable.swift; sourceTree = "<group>"; };
+		DAD15CB62EA7809100868987 /* ACHTTPContentFormatterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACHTTPContentFormatterFactory.swift; sourceTree = "<group>"; };
+		DAD15CBA2EA7852B00868987 /* ACChainInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACChainInteractable.swift; sourceTree = "<group>"; };
+		DAD15CBC2EA7864E00868987 /* ACSolanaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInteractor.swift; sourceTree = "<group>"; };
+		DAD15CC02EA7895F00868987 /* ACSolanaRequestSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRequestSpace.swift; sourceTree = "<group>"; };
+		DAD15CC22EA78C5A00868987 /* ACSolanaJSONRPCRequestPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCRequestPayload.swift; sourceTree = "<group>"; };
+		DAD15CC42EA7913E00868987 /* ACSolanaJSONRPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCRequest.swift; sourceTree = "<group>"; };
+		DAD15CC62EA792CB00868987 /* ACSolanaRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRPC.swift; sourceTree = "<group>"; };
+		DAD15CC82EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCResponse.swift; sourceTree = "<group>"; };
+		DAD15CCA2EA7C34900868987 /* ACSolanaGetBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBalance.swift; sourceTree = "<group>"; };
+		DAD15CCC2EA7C89800868987 /* ACSolanaRPCAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaRPCAPI.swift; sourceTree = "<group>"; };
+		DAD15CD22EA7CEC100868987 /* AstractConnectExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstractConnectExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD15CE12EA7CEC200868987 /* AstractConnectExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstractConnectExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD15CEB2EA7CEC200868987 /* AstractConnectExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstractConnectExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD15D022EA7DD2400868987 /* ACEncoderGeneratable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEncoderGeneratable.swift; sourceTree = "<group>"; };
+		DAD15D042EA7DD9300868987 /* ACEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEncodable.swift; sourceTree = "<group>"; };
+		DAD15D062EA7DE5900868987 /* ACJSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACJSONCoder.swift; sourceTree = "<group>"; };
+		DAD15D082EA7DF1500868987 /* ACCoderDefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCoderDefaultFactory.swift; sourceTree = "<group>"; };
+		DAD15D0B2EA8BFA800868987 /* ACLoggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACLoggable.swift; sourceTree = "<group>"; };
+		DAD15D0D2EA8C10A00868987 /* ACConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACConsoleLogger.swift; sourceTree = "<group>"; };
+		DAD15D132EA8D60F00868987 /* ACSolanaGetAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetAccountInfo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DA861BDC2EA531B000C50B77 /* AstraConnectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AstraConnectTests;
+			sourceTree = "<group>";
+		};
+		DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AstractConnectExampleTests;
+			sourceTree = "<group>";
+		};
+		DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AstractConnectExampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA861BCB2EA531B000C50B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA861BD52EA531B000C50B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA861BD92EA531B000C50B77 /* AstraConnect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CCF2EA7CEC100868987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD15CFD2EA7CEF100868987 /* AstraConnect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CDE2EA7CEC200868987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CE82EA7CEC200868987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA3393BA2EB0FEB1001978FA /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CCA2EA7C34900868987 /* ACSolanaGetBalance.swift */,
+				DA3393812EABB5D5001978FA /* ACSolanaTokenBalance.swift */,
+				DA3394112EB34AD6001978FA /* ACSolanaGetMinBalanceForRentExemption.swift */,
+				DA3394532EB4E6E7001978FA /* ACSolanaTokenAccountBalance.swift */,
+				DA3394552EB4E921001978FA /* ACSolanaGetTokenAccountBalance.swift */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		DA3393BB2EB0FED9001978FA /* AccountInformation */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394572EB4F13A001978FA /* ACSolanaGetTokenAccountsByDelegate.swift */,
+				DA33945D2EB63308001978FA /* ACSolanaTokenAccountOwnershipParams.swift */,
+				DA33945B2EB632B9001978FA /* ACSolanaGetTokenAccountsByOwner.swift */,
+				DA33938F2EABB835001978FA /* ACSolanaAccountInfo.swift */,
+				DAD15D132EA8D60F00868987 /* ACSolanaGetAccountInfo.swift */,
+				DA3394132EB35432001978FA /* ACSolanaAccountOptionalParams.swift */,
+				DA3394022EB2FE19001978FA /* ACSolanaGetLargestAccounts.swift */,
+				DA3394152EB35478001978FA /* ACSolanaGetMultipleAccounts.swift */,
+				DA33941A2EB36503001978FA /* ACSolanaProgramAccountInfo.swift */,
+				DA33941C2EB3664B001978FA /* ACSolanaGetProgramAccounts.swift */,
+				DA33945F2EB63621001978FA /* ACSolanaTokenAccountInfo.swift */,
+				DA3394612EB637FD001978FA /* ACSolanaGetTokenLargestAccounts.swift */,
+				DA3394702EB65571001978FA /* ACSolanaVoteAccountInfo.swift */,
+				DA3394722EB6F35C001978FA /* ACSolanaGetVoteAccounts.swift */,
+				DA3394A52EB8AFB6001978FA /* ACSolanaGetTransactionCount.swift */,
+			);
+			path = AccountInformation;
+			sourceTree = "<group>";
+		};
+		DA3393BC2EB0FF1E001978FA /* BlockCommitment */ = {
+			isa = PBXGroup;
+			children = (
+				DA404B882EAB624400F2FA12 /* ACSolanaGetBlockCommitment.swift */,
+				DA3393E92EB20D68001978FA /* ACSolanaCommitments.swift */,
+			);
+			path = BlockCommitment;
+			sourceTree = "<group>";
+		};
+		DA3393BD2EB0FF2F001978FA /* BlockHeight */ = {
+			isa = PBXGroup;
+			children = (
+				DA404B8A2EAB7C5B00F2FA12 /* ACSolanaGetBlockHeight.swift */,
+			);
+			path = BlockHeight;
+			sourceTree = "<group>";
+		};
+		DA3393BE2EB0FF43001978FA /* BlockProduction */ = {
+			isa = PBXGroup;
+			children = (
+				DA404B922EAB8A9600F2FA12 /* ACSolanaProduction.swift */,
+				DA404B8E2EAB860B00F2FA12 /* ACSolanaGetBlockProduction.swift */,
+			);
+			path = BlockProduction;
+			sourceTree = "<group>";
+		};
+		DA3393BF2EB0FF79001978FA /* BlockTime */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393A82EAE1E9C001978FA /* ACSolanaGetBlockTime.swift */,
+			);
+			path = BlockTime;
+			sourceTree = "<group>";
+		};
+		DA3393C12EB0FFFD001978FA /* SingleBlock */ = {
+			isa = PBXGroup;
+			children = (
+				DA404B312EAA285D00F2FA12 /* ACSolanaGetBlock.swift */,
+				DA3393DE2EB1AC2B001978FA /* ACSolanaGetFirstAvailableBlock.swift */,
+			);
+			path = SingleBlock;
+			sourceTree = "<group>";
+		};
+		DA3393C22EB10024001978FA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393932EABBC23001978FA /* ACSolanaGetBlocks.swift */,
+			);
+			path = Blocks;
+			sourceTree = "<group>";
+		};
+		DA3393C32EB1003E001978FA /* ClusterNodes */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393AC2EAE2677001978FA /* ACSolanaClusterNode.swift */,
+				DA3393AA2EAE2608001978FA /* ACSolanaGetClusterNodes.swift */,
+			);
+			path = ClusterNodes;
+			sourceTree = "<group>";
+		};
+		DA3393C42EB10059001978FA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CBC2EA7864E00868987 /* ACSolanaInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DA3393C52EB1009F001978FA /* RPCRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CC62EA792CB00868987 /* ACSolanaRPC.swift */,
+			);
+			path = RPCRepresentation;
+			sourceTree = "<group>";
+		};
+		DA3393C62EB100B5001978FA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393C92EB101D1001978FA /* ACSolanaBasicOptionalParams.swift */,
+				DAD15CC02EA7895F00868987 /* ACSolanaRequestSpace.swift */,
+				DAD15CC22EA78C5A00868987 /* ACSolanaJSONRPCRequestPayload.swift */,
+				DAD15CC42EA7913E00868987 /* ACSolanaJSONRPCRequest.swift */,
+				DA3394A72EB8B266001978FA /* ACSolanaRequestBuildable.swift */,
+				DA3394AD2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift */,
+				DA3394AF2EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift */,
+				DA3394B12EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DA3393C72EB100D9001978FA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CC82EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift */,
+				DA3394992EB7A359001978FA /* ACSolanaJSONRPCError.swift */,
+				DA3394322EB4B460001978FA /* ACSolanaUniRespResult.swift */,
+				DA33949D2EB84279001978FA /* ACSolanaJSONRPCResponseBuilder.swift */,
+				DA33949F2EB84383001978FA /* ACSolanaResponsiveDefaultFactory.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		DA3393CB2EB101F1001978FA /* Epoch */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393AE2EB0E9C5001978FA /* ACSolanaEpochInfo.swift */,
+				DA3393B02EB0F17B001978FA /* ACSolanaGetEpochInfo.swift */,
+			);
+			path = Epoch;
+			sourceTree = "<group>";
+		};
+		DA3393CC2EB10213001978FA /* SlotRange */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393952EADFAD0001978FA /* ACSolanaLimitedSlotRange.swift */,
+				DA404B8C2EAB84D100F2FA12 /* ACSolanaSlotRange.swift */,
+			);
+			path = SlotRange;
+			sourceTree = "<group>";
+		};
+		DA3393CD2EB1024D001978FA /* RPCContext */ = {
+			isa = PBXGroup;
+			children = (
+				DA404B902EAB88A900F2FA12 /* ACSolanaRPCContext.swift */,
+			);
+			path = RPCContext;
+			sourceTree = "<group>";
+		};
+		DA3393CE2EB10273001978FA /* aLoadedAddresses */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393792EABB498001978FA /* ACSolanaLoadedAddresses.swift */,
+			);
+			path = aLoadedAddresses;
+			sourceTree = "<group>";
+		};
+		DA3393CF2EB10287001978FA /* Instruction */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393772EABB423001978FA /* ACSolanaInstructionReturnData.swift */,
+				DA33937D2EABB52A001978FA /* ACSolanaInstruction.swift */,
+				DA33937B2EABB4DF001978FA /* ACSolanaInnerInstructions.swift */,
+			);
+			path = Instruction;
+			sourceTree = "<group>";
+		};
+		DA3393D02EB102A2001978FA /* AddressTableLookup */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393872EABB674001978FA /* ACSolanaAddressTableLookup.swift */,
+			);
+			path = AddressTableLookup;
+			sourceTree = "<group>";
+		};
+		DA3393D12EB102B1001978FA /* UiTokenAmount */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393832EABB608001978FA /* ACSolanaUiTokenAmount.swift */,
+			);
+			path = UiTokenAmount;
+			sourceTree = "<group>";
+		};
+		DA3393D32EB102CD001978FA /* Tx */ = {
+			isa = PBXGroup;
+			children = (
+				DA33938D2EABB7E0001978FA /* ACSolanaTx.swift */,
+				DA3394672EB63FAC001978FA /* ACSolanaGetTransaction.swift */,
+				DA33938B2EABB7AC001978FA /* ACSolansTxMessage.swift */,
+				DA3393892EABB777001978FA /* ACSolanaTxRequirementHeader.swift */,
+				DA33937F2EABB57D001978FA /* ACSolanaTxReward.swift */,
+				DA3393852EABB641001978FA /* ACSolanaTxStatusMetadata.swift */,
+				DA33942E2EB4A948001978FA /* ACSolanaTxStatus.swift */,
+				DA3394692EB64213001978FA /* ACSolanaTxDetails.swift */,
+				DA33947B2EB73D89001978FA /* ACSolanaSendTransaction.swift */,
+				DA33947D2EB75393001978FA /* ACSolanasimulationTxInfo.swift */,
+				DA33947F2EB755BC001978FA /* ACSolanaSimulateTransaction.swift */,
+			);
+			path = Tx;
+			sourceTree = "<group>";
+		};
+		DA3393D42EB102DC001978FA /* DataSlice */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393912EABB90C001978FA /* ACSolanaDataSlice.swift */,
+			);
+			path = DataSlice;
+			sourceTree = "<group>";
+		};
+		DA3393D52EB102EF001978FA /* RPCAPISpace */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CCC2EA7C89800868987 /* ACSolanaRPCAPI.swift */,
+			);
+			path = RPCAPISpace;
+			sourceTree = "<group>";
+		};
+		DA3393D82EB103EA001978FA /* EpochSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393D62EB103EA001978FA /* ACSolanaEpochScheduleInformation.swift */,
+				DA3393D72EB103EA001978FA /* ACSolanaGetEpochSchedule.swift */,
+			);
+			path = EpochSchedule;
+			sourceTree = "<group>";
+		};
+		DA3393DB2EB1043E001978FA /* Fees */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393DC2EB1045F001978FA /* ACSolanaGetFeeForMessage.swift */,
+				DA3394232EB4559F001978FA /* ACSolanaPrioritizationFeeInfo.swift */,
+				DA3394252EB45693001978FA /* ACSolanaGetRecentPrioritizationFees.swift */,
+			);
+			path = Fees;
+			sourceTree = "<group>";
+		};
+		DA3393E32EB20464001978FA /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393E42EB20492001978FA /* ACSolanaGetHealth.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		DA3393ED2EB2153C001978FA /* SolanaCore */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393EE2EB2155B001978FA /* ACSolanaCoreVersionKind.swift */,
+			);
+			path = SolanaCore;
+			sourceTree = "<group>";
+		};
+		DA3393F02EB21845001978FA /* NodeIdentity */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393F12EB21889001978FA /* ACSolanaNodeIdentity.swift */,
+				DA3393F32EB218FF001978FA /* ACSolanaGetIdentity.swift */,
+			);
+			path = NodeIdentity;
+			sourceTree = "<group>";
+		};
+		DA3393F52EB21C3F001978FA /* Inflation */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393F62EB21C5D001978FA /* ACSolanaInflationGovernor.swift */,
+				DA3393F82EB21DA2001978FA /* ACSolanaGetInflationGovernor.swift */,
+				DA3393FA2EB23F9B001978FA /* ACSolanaInflationRate.swift */,
+				DA3393FC2EB2406E001978FA /* ACSolanaGetInflationRate.swift */,
+				DA3393FE2EB24466001978FA /* ACSolanaInflationReward.swift */,
+				DA3394002EB245CA001978FA /* ACSolanaGetInflationReward.swift */,
+			);
+			path = Inflation;
+			sourceTree = "<group>";
+		};
+		DA3394042EB30A5F001978FA /* BlockHash */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394052EB30AEA001978FA /* ACSolanaLatestBlockInfo.swift */,
+				DA3393E12EB1B6F0001978FA /* ACSolanaGetGenesisHash.swift */,
+				DA3394072EB30C2E001978FA /* ACSolanaGetLatestBlockInfo.swift */,
+				DA3394742EB70321001978FA /* ACSolanaIsBlockhashValid.swift */,
+			);
+			path = BlockHash;
+			sourceTree = "<group>";
+		};
+		DA3394092EB310F5001978FA /* Leader */ = {
+			isa = PBXGroup;
+			children = (
+				DA33940A2EB31161001978FA /* ACSolanaGetLeaderSchedule.swift */,
+			);
+			path = Leader;
+			sourceTree = "<group>";
+		};
+		DA33940C2EB34408001978FA /* Slot */ = {
+			isa = PBXGroup;
+			children = (
+				DA3393E72EB20C95001978FA /* ACSolanaSnapshotSlotInfo.swift */,
+				DA3393EB2EB20F3D001978FA /* ACSolanaGetHighestSnapshotSlot.swift */,
+				DA33940D2EB34487001978FA /* ACSolanaGetMaxRetransmitSlot.swift */,
+				DA33940F2EB34818001978FA /* ACSolanaGetMaxShredInsertSlot.swift */,
+				DA3394342EB4BA1B001978FA /* ACSolanaGetSlot.swift */,
+				DA3394362EB4BC3C001978FA /* ACSolanaGetSlotLeader.swift */,
+				DA3394382EB4BE25001978FA /* ACSolanaGetSlotLeaders.swift */,
+				DA3394762EB73688001978FA /* ACSolanaGetMinimumLedgerSlot.swift */,
+			);
+			path = Slot;
+			sourceTree = "<group>";
+		};
+		DA3394172EB36291001978FA /* DataFilter */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394182EB362A9001978FA /* ACSolanaDataFilter.swift */,
+			);
+			path = DataFilter;
+			sourceTree = "<group>";
+		};
+		DA33941E2EB44DBA001978FA /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				DA33941F2EB44DC9001978FA /* ACSolanaPerformanceSample.swift */,
+				DA3394212EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
+		DA3394272EB49821001978FA /* Signatures */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394282EB498F4001978FA /* ACSolanaSignatureInfo.swift */,
+				DA33942A2EB49B5A001978FA /* ACSolanaGetSignaturesForAddress.swift */,
+				DA33942C2EB4A852001978FA /* ACSolanaSignatureStatus.swift */,
+				DA3394302EB4ADA3001978FA /* ACSolanaGetSignatureStatuses.swift */,
+			);
+			path = Signatures;
+			sourceTree = "<group>";
+		};
+		DA33943A2EB4C18D001978FA /* Stake */ = {
+			isa = PBXGroup;
+			children = (
+				DA33943B2EB4C1A9001978FA /* ACSolanaGetStakeMinimumDelegation.swift */,
+			);
+			path = Stake;
+			sourceTree = "<group>";
+		};
+		DA33944E2EB4E1DA001978FA /* Supply */ = {
+			isa = PBXGroup;
+			children = (
+				DA33944F2EB4E1EB001978FA /* ACSolanaSupplyInfo.swift */,
+				DA3394512EB4E2DD001978FA /* ACSolanaGetSupply.swift */,
+				DA3394632EB63BB1001978FA /* ACSolanaGetTokenSupply.swift */,
+				DA3394652EB63C69001978FA /* ACSolanaTokenSupplyInfo.swift */,
+			);
+			path = Supply;
+			sourceTree = "<group>";
+		};
+		DA33946B2EB6514F001978FA /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				DA33946C2EB65162001978FA /* ACSolanaGetVersion.swift */,
+				DA33946E2EB651AA001978FA /* ACSolanaNodeVersion.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		DA3394782EB738C3001978FA /* Airdrop */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394792EB738D8001978FA /* ACSolanaRequestAirdrop.swift */,
+			);
+			path = Airdrop;
+			sourceTree = "<group>";
+		};
+		DA3394882EB76209001978FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394872EB76209001978FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA33948C2EB76209001978FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA33948E2EB76209001978FA /* AstractConnectExample */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394952EB76277001978FA /* App */,
+				DA3394942EB7623F001978FA /* Solana */,
+				DA3394882EB76209001978FA /* Preview Content */,
+				DA33948C2EB76209001978FA /* Views */,
+				DA33948D2EB76209001978FA /* Assets.xcassets */,
+			);
+			path = AstractConnectExample;
+			sourceTree = "<group>";
+		};
+		DA3394942EB7623F001978FA /* Solana */ = {
+			isa = PBXGroup;
+			children = (
+				DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */,
+			);
+			path = Solana;
+			sourceTree = "<group>";
+		};
+		DA3394952EB76277001978FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */,
+				DA33948A2EB76209001978FA /* ChainListView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA3394962EB79F5D001978FA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394972EB79F8C001978FA /* ACRPCResponsive.swift */,
+				DA33949B2EB841BF001978FA /* ACRPCResponseBuildable.swift */,
+				DA3394A12EB846F5001978FA /* ACRPCResponsiveGeneratable.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		DA861BC42EA531B000C50B77 = {
+			isa = PBXGroup;
+			children = (
+				DA33948E2EB76209001978FA /* AstractConnectExample */,
+				DA861BFE2EA5DA9300C50B77 /* AstraConnect */,
+				DA861BDC2EA531B000C50B77 /* AstraConnectTests */,
+				DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */,
+				DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */,
+				DAD15CFC2EA7CEF100868987 /* Frameworks */,
+				DA861BCF2EA531B000C50B77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA861BCF2EA531B000C50B77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA861BCE2EA531B000C50B77 /* AstraConnect.framework */,
+				DA861BD82EA531B000C50B77 /* AstraConnectTests.xctest */,
+				DAD15CD22EA7CEC100868987 /* AstractConnectExample.app */,
+				DAD15CE12EA7CEC200868987 /* AstractConnectExampleTests.xctest */,
+				DAD15CEB2EA7CEC200868987 /* AstractConnectExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA861BFB2EA5DA9300C50B77 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DA861BF92EA5DA9300C50B77 /* ACRequestable.swift */,
+				DA861BFA2EA5DA9300C50B77 /* ACRequestWay.swift */,
+				DA861C0E2EA5E49D00C50B77 /* ACPOSTRequestWay.swift */,
+				DAD15C5B2EA6197500868987 /* ACRequestSpace.swift */,
+				DAD15C5D2EA61BEB00868987 /* ACHTTPContentFormattable.swift */,
+				DAD15C5F2EA61D2400868987 /* ACJSONFormatter.swift */,
+				DAD15C952EA66D3B00868987 /* ACURLRequestBuildable.swift */,
+				DAD15C972EA66E9F00868987 /* ACPOSTURLRequestBuilder.swift */,
+				DAD15CA32EA72CD200868987 /* ACURLRequestBuilderFactory.swift */,
+				DAD15CAA2EA766A400868987 /* ACURLRequestBuilderGeneratable.swift */,
+				DAD15CB42EA77F8E00868987 /* ACHTTPContentFormatterGeneratable.swift */,
+				DAD15CB62EA7809100868987 /* ACHTTPContentFormatterFactory.swift */,
+				DA3394A32EB88F3A001978FA /* ACRequestDataStreamAssociation.swift */,
+				DA3394A92EB8B2AD001978FA /* ACRPCRequestBuildable.swift */,
+				DA3394AB2EB8B54A001978FA /* ACRPCReqBuilderGeneratable.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DA861BFE2EA5DA9300C50B77 /* AstraConnect */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394962EB79F5D001978FA /* Response */,
+				DAD15D0A2EA8BF6C00868987 /* Log */,
+				DAD15CB92EA7848E00868987 /* Interaction */,
+				DAD15CB82EA7839C00868987 /* Solana */,
+				DAD15C9E2EA67DA900868987 /* Codable */,
+				DAD15C992EA6728E00868987 /* Error */,
+				DA861C092EA5E11200C50B77 /* Requester */,
+				DA861C032EA5DA9C00C50B77 /* RPC */,
+				DA861BFB2EA5DA9300C50B77 /* Request */,
+				DA861BFC2EA5DA9300C50B77 /* AstraConnect.h */,
+				DA861BFD2EA5DA9300C50B77 /* AstraConnect.docc */,
+			);
+			path = AstraConnect;
+			sourceTree = "<group>";
+		};
+		DA861C032EA5DA9C00C50B77 /* RPC */ = {
+			isa = PBXGroup;
+			children = (
+				DA861C042EA5DADE00C50B77 /* ACRPCPresentable.swift */,
+				DAD15CA62EA7365100868987 /* ACRPCDataRepresentable.swift */,
+				DAD15CA82EA7383100868987 /* ACRPCJSONData.swift */,
+			);
+			path = RPC;
+			sourceTree = "<group>";
+		};
+		DA861C092EA5E11200C50B77 /* Requester */ = {
+			isa = PBXGroup;
+			children = (
+				DA861C0A2EA5E14D00C50B77 /* ACRequestCapability.swift */,
+				DA861C0C2EA5E31400C50B77 /* URLSessionRequester.swift */,
+			);
+			path = Requester;
+			sourceTree = "<group>";
+		};
+		DAD15C992EA6728E00868987 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15C9A2EA672B300868987 /* ACError.swift */,
+				DAD15C9C2EA674C600868987 /* ACRPCProcessErrorKind.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DAD15C9E2EA67DA900868987 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15C9F2EA67DF600868987 /* ACDecodable.swift */,
+				DAD15CA12EA67F6300868987 /* ACJSONDecoder.swift */,
+				DAD15CAC2EA76B7E00868987 /* ACDecoderGeneratable.swift */,
+				DAD15CAE2EA76DA400868987 /* ACDecoderDefaultFactory.swift */,
+				DAD15D022EA7DD2400868987 /* ACEncoderGeneratable.swift */,
+				DAD15D042EA7DD9300868987 /* ACEncodable.swift */,
+				DAD15D062EA7DE5900868987 /* ACJSONCoder.swift */,
+				DAD15D082EA7DF1500868987 /* ACCoderDefaultFactory.swift */,
+				DA404B2F2EA9CEFC00F2FA12 /* ACDynamicCodation.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		DAD15CB82EA7839C00868987 /* Solana */ = {
+			isa = PBXGroup;
+			children = (
+				DA3394782EB738C3001978FA /* Airdrop */,
+				DA33946B2EB6514F001978FA /* Node */,
+				DA33944E2EB4E1DA001978FA /* Supply */,
+				DA33943A2EB4C18D001978FA /* Stake */,
+				DA3394272EB49821001978FA /* Signatures */,
+				DA33941E2EB44DBA001978FA /* Performance */,
+				DA3394172EB36291001978FA /* DataFilter */,
+				DA33940C2EB34408001978FA /* Slot */,
+				DA3394092EB310F5001978FA /* Leader */,
+				DA3394042EB30A5F001978FA /* BlockHash */,
+				DA3393F52EB21C3F001978FA /* Inflation */,
+				DA3393F02EB21845001978FA /* NodeIdentity */,
+				DA3393ED2EB2153C001978FA /* SolanaCore */,
+				DA3393E32EB20464001978FA /* Health */,
+				DA3393DB2EB1043E001978FA /* Fees */,
+				DA3393D82EB103EA001978FA /* EpochSchedule */,
+				DA3393C42EB10059001978FA /* Interactor */,
+				DA3393C62EB100B5001978FA /* Request */,
+				DA3393C52EB1009F001978FA /* RPCRepresentation */,
+				DA3393C72EB100D9001978FA /* Response */,
+				DA3393BA2EB0FEB1001978FA /* Balance */,
+				DA3393D52EB102EF001978FA /* RPCAPISpace */,
+				DA3393D42EB102DC001978FA /* DataSlice */,
+				DA3393BB2EB0FED9001978FA /* AccountInformation */,
+				DA3393D32EB102CD001978FA /* Tx */,
+				DA3393D02EB102A2001978FA /* AddressTableLookup */,
+				DA3393D12EB102B1001978FA /* UiTokenAmount */,
+				DA3393CF2EB10287001978FA /* Instruction */,
+				DA3393C12EB0FFFD001978FA /* SingleBlock */,
+				DA3393BC2EB0FF1E001978FA /* BlockCommitment */,
+				DA3393BD2EB0FF2F001978FA /* BlockHeight */,
+				DA3393CC2EB10213001978FA /* SlotRange */,
+				DA3393BE2EB0FF43001978FA /* BlockProduction */,
+				DA3393CD2EB1024D001978FA /* RPCContext */,
+				DA3393CE2EB10273001978FA /* aLoadedAddresses */,
+				DA3393C22EB10024001978FA /* Blocks */,
+				DA3393BF2EB0FF79001978FA /* BlockTime */,
+				DA3393C32EB1003E001978FA /* ClusterNodes */,
+				DA3393CB2EB101F1001978FA /* Epoch */,
+			);
+			path = Solana;
+			sourceTree = "<group>";
+		};
+		DAD15CB92EA7848E00868987 /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15CBA2EA7852B00868987 /* ACChainInteractable.swift */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		DAD15CFC2EA7CEF100868987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAD15D0A2EA8BF6C00868987 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				DAD15D0B2EA8BFA800868987 /* ACLoggable.swift */,
+				DAD15D0D2EA8C10A00868987 /* ACConsoleLogger.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DA861BC92EA531B000C50B77 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA861BFF2EA5DA9300C50B77 /* AstraConnect.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DA861BCD2EA531B000C50B77 /* AstraConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA861BE12EA531B000C50B77 /* Build configuration list for PBXNativeTarget "AstraConnect" */;
+			buildPhases = (
+				DA861BC92EA531B000C50B77 /* Headers */,
+				DA861BCA2EA531B000C50B77 /* Sources */,
+				DA861BCB2EA531B000C50B77 /* Frameworks */,
+				DA861BCC2EA531B000C50B77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AstraConnect;
+			packageProductDependencies = (
+			);
+			productName = AstraConnect;
+			productReference = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA861BD72EA531B000C50B77 /* AstraConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA861BE62EA531B000C50B77 /* Build configuration list for PBXNativeTarget "AstraConnectTests" */;
+			buildPhases = (
+				DA861BD42EA531B000C50B77 /* Sources */,
+				DA861BD52EA531B000C50B77 /* Frameworks */,
+				DA861BD62EA531B000C50B77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA861BDB2EA531B000C50B77 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DA861BDC2EA531B000C50B77 /* AstraConnectTests */,
+			);
+			name = AstraConnectTests;
+			packageProductDependencies = (
+			);
+			productName = AstraConnectTests;
+			productReference = DA861BD82EA531B000C50B77 /* AstraConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAD15CD12EA7CEC100868987 /* AstractConnectExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD15CF32EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExample" */;
+			buildPhases = (
+				DAD15CCE2EA7CEC100868987 /* Sources */,
+				DAD15CCF2EA7CEC100868987 /* Frameworks */,
+				DAD15CD02EA7CEC100868987 /* Resources */,
+				DAD15D012EA7CEF100868987 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD15D002EA7CEF100868987 /* PBXTargetDependency */,
+			);
+			name = AstractConnectExample;
+			packageProductDependencies = (
+			);
+			productName = AstractConnectExample;
+			productReference = DAD15CD22EA7CEC100868987 /* AstractConnectExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAD15CE02EA7CEC200868987 /* AstractConnectExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD15CF62EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExampleTests" */;
+			buildPhases = (
+				DAD15CDD2EA7CEC200868987 /* Sources */,
+				DAD15CDE2EA7CEC200868987 /* Frameworks */,
+				DAD15CDF2EA7CEC200868987 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD15CE32EA7CEC200868987 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */,
+			);
+			name = AstractConnectExampleTests;
+			packageProductDependencies = (
+			);
+			productName = AstractConnectExampleTests;
+			productReference = DAD15CE12EA7CEC200868987 /* AstractConnectExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAD15CEA2EA7CEC200868987 /* AstractConnectExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD15CF92EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExampleUITests" */;
+			buildPhases = (
+				DAD15CE72EA7CEC200868987 /* Sources */,
+				DAD15CE82EA7CEC200868987 /* Frameworks */,
+				DAD15CE92EA7CEC200868987 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD15CED2EA7CEC200868987 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */,
+			);
+			name = AstractConnectExampleUITests;
+			packageProductDependencies = (
+			);
+			productName = AstractConnectExampleUITests;
+			productReference = DAD15CEB2EA7CEC200868987 /* AstractConnectExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA861BC52EA531B000C50B77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					DA861BCD2EA531B000C50B77 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					DA861BD72EA531B000C50B77 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					DAD15CD12EA7CEC100868987 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					DAD15CE02EA7CEC200868987 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = DAD15CD12EA7CEC100868987;
+					};
+					DAD15CEA2EA7CEC200868987 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = DAD15CD12EA7CEC100868987;
+					};
+				};
+			};
+			buildConfigurationList = DA861BC82EA531B000C50B77 /* Build configuration list for PBXProject "AstraConnect" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA861BC42EA531B000C50B77;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DA861BCF2EA531B000C50B77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA861BCD2EA531B000C50B77 /* AstraConnect */,
+				DA861BD72EA531B000C50B77 /* AstraConnectTests */,
+				DAD15CD12EA7CEC100868987 /* AstractConnectExample */,
+				DAD15CE02EA7CEC200868987 /* AstractConnectExampleTests */,
+				DAD15CEA2EA7CEC200868987 /* AstractConnectExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA861BCC2EA531B000C50B77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA861BD62EA531B000C50B77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CD02EA7CEC100868987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA33948F2EB76209001978FA /* Preview Assets.xcassets in Resources */,
+				DA3394902EB76209001978FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CDF2EA7CEC200868987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CE92EA7CEC200868987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA861BCA2EA531B000C50B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3393802EABB57D001978FA /* ACSolanaTxReward.swift in Sources */,
+				DAD15D052EA7DD9300868987 /* ACEncodable.swift in Sources */,
+				DA3393842EABB608001978FA /* ACSolanaUiTokenAmount.swift in Sources */,
+				DA3394982EB79F8C001978FA /* ACRPCResponsive.swift in Sources */,
+				DAD15CC92EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift in Sources */,
+				DAD15C962EA66D3B00868987 /* ACURLRequestBuildable.swift in Sources */,
+				DA3394222EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift in Sources */,
+				DA3394522EB4E2DD001978FA /* ACSolanaGetSupply.swift in Sources */,
+				DAD15CB52EA77F8E00868987 /* ACHTTPContentFormatterGeneratable.swift in Sources */,
+				DAD15D092EA7DF1500868987 /* ACCoderDefaultFactory.swift in Sources */,
+				DA3394372EB4BC3C001978FA /* ACSolanaGetSlotLeader.swift in Sources */,
+				DA33941D2EB3664B001978FA /* ACSolanaGetProgramAccounts.swift in Sources */,
+				DAD15CAF2EA76DA400868987 /* ACDecoderDefaultFactory.swift in Sources */,
+				DA3394542EB4E6E7001978FA /* ACSolanaTokenAccountBalance.swift in Sources */,
+				DA3394032EB2FE19001978FA /* ACSolanaGetLargestAccounts.swift in Sources */,
+				DA3393882EABB674001978FA /* ACSolanaAddressTableLookup.swift in Sources */,
+				DA3394A82EB8B266001978FA /* ACSolanaRequestBuildable.swift in Sources */,
+				DA3394312EB4ADA3001978FA /* ACSolanaGetSignatureStatuses.swift in Sources */,
+				DAD15CBD2EA7864E00868987 /* ACSolanaInteractor.swift in Sources */,
+				DA3393FF2EB24466001978FA /* ACSolanaInflationReward.swift in Sources */,
+				DA33947C2EB73D89001978FA /* ACSolanaSendTransaction.swift in Sources */,
+				DA3394122EB34AD6001978FA /* ACSolanaGetMinBalanceForRentExemption.swift in Sources */,
+				DA3393EC2EB20F3D001978FA /* ACSolanaGetHighestSnapshotSlot.swift in Sources */,
+				DA861C0B2EA5E14D00C50B77 /* ACRequestCapability.swift in Sources */,
+				DA3393EA2EB20D68001978FA /* ACSolanaCommitments.swift in Sources */,
+				DA33947E2EB75393001978FA /* ACSolanasimulationTxInfo.swift in Sources */,
+				DA3393E22EB1B6F0001978FA /* ACSolanaGetGenesisHash.swift in Sources */,
+				DA861C002EA5DA9300C50B77 /* ACRequestable.swift in Sources */,
+				DA3393FB2EB23F9B001978FA /* ACSolanaInflationRate.swift in Sources */,
+				DA3394102EB34818001978FA /* ACSolanaGetMaxShredInsertSlot.swift in Sources */,
+				DAD15C9B2EA672B300868987 /* ACError.swift in Sources */,
+				DA861C0D2EA5E31400C50B77 /* URLSessionRequester.swift in Sources */,
+				DA33938A2EABB777001978FA /* ACSolanaTxRequirementHeader.swift in Sources */,
+				DA404B8B2EAB7C5B00F2FA12 /* ACSolanaGetBlockHeight.swift in Sources */,
+				DA404B932EAB8A9600F2FA12 /* ACSolanaProduction.swift in Sources */,
+				DA33946D2EB65162001978FA /* ACSolanaGetVersion.swift in Sources */,
+				DAD15CC12EA7895F00868987 /* ACSolanaRequestSpace.swift in Sources */,
+				DA3394332EB4B460001978FA /* ACSolanaUniRespResult.swift in Sources */,
+				DA3394B02EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift in Sources */,
+				DAD15CC52EA7913E00868987 /* ACSolanaJSONRPCRequest.swift in Sources */,
+				DA33947A2EB738D8001978FA /* ACSolanaRequestAirdrop.swift in Sources */,
+				DAD15CB72EA7809100868987 /* ACHTTPContentFormatterFactory.swift in Sources */,
+				DA3394AE2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift in Sources */,
+				DA404B302EA9CEFC00F2FA12 /* ACDynamicCodation.swift in Sources */,
+				DA3394A22EB846F5001978FA /* ACRPCResponsiveGeneratable.swift in Sources */,
+				DA3394AA2EB8B2AD001978FA /* ACRPCRequestBuildable.swift in Sources */,
+				DAD15C5E2EA61BEB00868987 /* ACHTTPContentFormattable.swift in Sources */,
+				DAD15D072EA7DE5900868987 /* ACJSONCoder.swift in Sources */,
+				DA3393CA2EB101D1001978FA /* ACSolanaBasicOptionalParams.swift in Sources */,
+				DA404B912EAB88A900F2FA12 /* ACSolanaRPCContext.swift in Sources */,
+				DA33946F2EB651AA001978FA /* ACSolanaNodeVersion.swift in Sources */,
+				DA3393822EABB5D5001978FA /* ACSolanaTokenBalance.swift in Sources */,
+				DAD15CC72EA792CB00868987 /* ACSolanaRPC.swift in Sources */,
+				DA33942F2EB4A948001978FA /* ACSolanaTxStatus.swift in Sources */,
+				DA3394732EB6F35C001978FA /* ACSolanaGetVoteAccounts.swift in Sources */,
+				DA3394712EB65571001978FA /* ACSolanaVoteAccountInfo.swift in Sources */,
+				DA861C052EA5DADE00C50B77 /* ACRPCPresentable.swift in Sources */,
+				DAD15C9D2EA674C600868987 /* ACRPCProcessErrorKind.swift in Sources */,
+				DA3394502EB4E1EB001978FA /* ACSolanaSupplyInfo.swift in Sources */,
+				DA3394622EB637FD001978FA /* ACSolanaGetTokenLargestAccounts.swift in Sources */,
+				DA3394352EB4BA1B001978FA /* ACSolanaGetSlot.swift in Sources */,
+				DA3393A92EAE1E9C001978FA /* ACSolanaGetBlockTime.swift in Sources */,
+				DA3393862EABB641001978FA /* ACSolanaTxStatusMetadata.swift in Sources */,
+				DA3394602EB63621001978FA /* ACSolanaTokenAccountInfo.swift in Sources */,
+				DA861C012EA5DA9300C50B77 /* AstraConnect.docc in Sources */,
+				DA3393962EADFAD0001978FA /* ACSolanaLimitedSlotRange.swift in Sources */,
+				DA3393DF2EB1AC2B001978FA /* ACSolanaGetFirstAvailableBlock.swift in Sources */,
+				DA3394A42EB88F3A001978FA /* ACRequestDataStreamAssociation.swift in Sources */,
+				DAD15CA42EA72CD200868987 /* ACURLRequestBuilderFactory.swift in Sources */,
+				DA33938E2EABB7E0001978FA /* ACSolanaTx.swift in Sources */,
+				DA3394162EB35478001978FA /* ACSolanaGetMultipleAccounts.swift in Sources */,
+				DA3394A02EB84383001978FA /* ACSolanaResponsiveDefaultFactory.swift in Sources */,
+				DAD15CC32EA78C5A00868987 /* ACSolanaJSONRPCRequestPayload.swift in Sources */,
+				DA33942B2EB49B5A001978FA /* ACSolanaGetSignaturesForAddress.swift in Sources */,
+				DA33945C2EB632B9001978FA /* ACSolanaGetTokenAccountsByOwner.swift in Sources */,
+				DA3394012EB245CA001978FA /* ACSolanaGetInflationReward.swift in Sources */,
+				DAD15D142EA8D60F00868987 /* ACSolanaGetAccountInfo.swift in Sources */,
+				DAD15C602EA61D2400868987 /* ACJSONFormatter.swift in Sources */,
+				DA3394662EB63C69001978FA /* ACSolanaTokenSupplyInfo.swift in Sources */,
+				DA3393FD2EB2406E001978FA /* ACSolanaGetInflationRate.swift in Sources */,
+				DA3393942EABBC23001978FA /* ACSolanaGetBlocks.swift in Sources */,
+				DA3394202EB44DC9001978FA /* ACSolanaPerformanceSample.swift in Sources */,
+				DA3393B12EB0F17B001978FA /* ACSolanaGetEpochInfo.swift in Sources */,
+				DA3393D92EB103EA001978FA /* ACSolanaEpochScheduleInformation.swift in Sources */,
+				DA3393DA2EB103EA001978FA /* ACSolanaGetEpochSchedule.swift in Sources */,
+				DA3393AF2EB0E9C5001978FA /* ACSolanaEpochInfo.swift in Sources */,
+				DA33946A2EB64213001978FA /* ACSolanaTxDetails.swift in Sources */,
+				DA3394082EB30C2E001978FA /* ACSolanaGetLatestBlockInfo.swift in Sources */,
+				DA33949C2EB841BF001978FA /* ACRPCResponseBuildable.swift in Sources */,
+				DAD15CBB2EA7852B00868987 /* ACChainInteractable.swift in Sources */,
+				DA3394392EB4BE25001978FA /* ACSolanaGetSlotLeaders.swift in Sources */,
+				DA404B322EAA285D00F2FA12 /* ACSolanaGetBlock.swift in Sources */,
+				DA3393902EABB835001978FA /* ACSolanaAccountInfo.swift in Sources */,
+				DA33945E2EB63308001978FA /* ACSolanaTokenAccountOwnershipParams.swift in Sources */,
+				DA3393F72EB21C5D001978FA /* ACSolanaInflationGovernor.swift in Sources */,
+				DA3393AB2EAE2608001978FA /* ACSolanaGetClusterNodes.swift in Sources */,
+				DA33943C2EB4C1A9001978FA /* ACSolanaGetStakeMinimumDelegation.swift in Sources */,
+				DA3394062EB30AEA001978FA /* ACSolanaLatestBlockInfo.swift in Sources */,
+				DA3394562EB4E921001978FA /* ACSolanaGetTokenAccountBalance.swift in Sources */,
+				DA3393F92EB21DA2001978FA /* ACSolanaGetInflationGovernor.swift in Sources */,
+				DA3393AD2EAE2677001978FA /* ACSolanaClusterNode.swift in Sources */,
+				DA3394752EB70321001978FA /* ACSolanaIsBlockhashValid.swift in Sources */,
+				DA3394192EB362A9001978FA /* ACSolanaDataFilter.swift in Sources */,
+				DA3394582EB4F13A001978FA /* ACSolanaGetTokenAccountsByDelegate.swift in Sources */,
+				DA33940B2EB31161001978FA /* ACSolanaGetLeaderSchedule.swift in Sources */,
+				DA861C022EA5DA9300C50B77 /* ACRequestWay.swift in Sources */,
+				DA3394262EB45693001978FA /* ACSolanaGetRecentPrioritizationFees.swift in Sources */,
+				DA3393F22EB21889001978FA /* ACSolanaNodeIdentity.swift in Sources */,
+				DA3394802EB755BC001978FA /* ACSolanaSimulateTransaction.swift in Sources */,
+				DA3394242EB4559F001978FA /* ACSolanaPrioritizationFeeInfo.swift in Sources */,
+				DA404B892EAB624500F2FA12 /* ACSolanaGetBlockCommitment.swift in Sources */,
+				DA3393922EABB90C001978FA /* ACSolanaDataSlice.swift in Sources */,
+				DAD15CA22EA67F6300868987 /* ACJSONDecoder.swift in Sources */,
+				DA33942D2EB4A852001978FA /* ACSolanaSignatureStatus.swift in Sources */,
+				DA3394AC2EB8B54A001978FA /* ACRPCReqBuilderGeneratable.swift in Sources */,
+				DA3394A62EB8AFB6001978FA /* ACSolanaGetTransactionCount.swift in Sources */,
+				DA3393EF2EB2155B001978FA /* ACSolanaCoreVersionKind.swift in Sources */,
+				DA33937A2EABB498001978FA /* ACSolanaLoadedAddresses.swift in Sources */,
+				DA33940E2EB34487001978FA /* ACSolanaGetMaxRetransmitSlot.swift in Sources */,
+				DA3393F42EB218FF001978FA /* ACSolanaGetIdentity.swift in Sources */,
+				DA3393E52EB20492001978FA /* ACSolanaGetHealth.swift in Sources */,
+				DAD15C982EA66E9F00868987 /* ACPOSTURLRequestBuilder.swift in Sources */,
+				DAD15CAD2EA76B7E00868987 /* ACDecoderGeneratable.swift in Sources */,
+				DA3393E82EB20C95001978FA /* ACSolanaSnapshotSlotInfo.swift in Sources */,
+				DAD15D0C2EA8BFA800868987 /* ACLoggable.swift in Sources */,
+				DAD15CA92EA7383100868987 /* ACRPCJSONData.swift in Sources */,
+				DAD15D032EA7DD2400868987 /* ACEncoderGeneratable.swift in Sources */,
+				DAD15C5C2EA6197500868987 /* ACRequestSpace.swift in Sources */,
+				DA33949E2EB84279001978FA /* ACSolanaJSONRPCResponseBuilder.swift in Sources */,
+				DA404B8D2EAB84D100F2FA12 /* ACSolanaSlotRange.swift in Sources */,
+				DA33937C2EABB4DF001978FA /* ACSolanaInnerInstructions.swift in Sources */,
+				DA33937E2EABB52A001978FA /* ACSolanaInstruction.swift in Sources */,
+				DA33949A2EB7A359001978FA /* ACSolanaJSONRPCError.swift in Sources */,
+				DA3394682EB63FAC001978FA /* ACSolanaGetTransaction.swift in Sources */,
+				DA33941B2EB36503001978FA /* ACSolanaProgramAccountInfo.swift in Sources */,
+				DAD15CA72EA7365100868987 /* ACRPCDataRepresentable.swift in Sources */,
+				DAD15CAB2EA766A400868987 /* ACURLRequestBuilderGeneratable.swift in Sources */,
+				DAD15CCB2EA7C34900868987 /* ACSolanaGetBalance.swift in Sources */,
+				DA861C0F2EA5E49D00C50B77 /* ACPOSTRequestWay.swift in Sources */,
+				DAD15CCD2EA7C89800868987 /* ACSolanaRPCAPI.swift in Sources */,
+				DA404B8F2EAB860B00F2FA12 /* ACSolanaGetBlockProduction.swift in Sources */,
+				DA3394642EB63BB1001978FA /* ACSolanaGetTokenSupply.swift in Sources */,
+				DA3393782EABB423001978FA /* ACSolanaInstructionReturnData.swift in Sources */,
+				DA3394772EB73688001978FA /* ACSolanaGetMinimumLedgerSlot.swift in Sources */,
+				DA3394B22EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift in Sources */,
+				DA3393DD2EB1045F001978FA /* ACSolanaGetFeeForMessage.swift in Sources */,
+				DAD15CA02EA67DF600868987 /* ACDecodable.swift in Sources */,
+				DA3394142EB35432001978FA /* ACSolanaAccountOptionalParams.swift in Sources */,
+				DAD15D0E2EA8C10A00868987 /* ACConsoleLogger.swift in Sources */,
+				DA33938C2EABB7AC001978FA /* ACSolansTxMessage.swift in Sources */,
+				DA3394292EB498F4001978FA /* ACSolanaSignatureInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA861BD42EA531B000C50B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CCE2EA7CEC100868987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3394912EB76209001978FA /* ChainListView.swift in Sources */,
+				DA3394922EB76209001978FA /* SolanaRPCAPIView.swift in Sources */,
+				DA3394932EB76209001978FA /* AstractConnectExampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CDD2EA7CEC200868987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD15CE72EA7CEC200868987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA861BDB2EA531B000C50B77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA861BCD2EA531B000C50B77 /* AstraConnect */;
+			targetProxy = DA861BDA2EA531B000C50B77 /* PBXContainerItemProxy */;
+		};
+		DAD15CE32EA7CEC200868987 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD15CD12EA7CEC100868987 /* AstractConnectExample */;
+			targetProxy = DAD15CE22EA7CEC200868987 /* PBXContainerItemProxy */;
+		};
+		DAD15CED2EA7CEC200868987 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD15CD12EA7CEC100868987 /* AstractConnectExample */;
+			targetProxy = DAD15CEC2EA7CEC200868987 /* PBXContainerItemProxy */;
+		};
+		DAD15D002EA7CEF100868987 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA861BCD2EA531B000C50B77 /* AstraConnect */;
+			targetProxy = DAD15CFF2EA7CEF100868987 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DA861BE22EA531B000C50B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstraConnect;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA861BE32EA531B000C50B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstraConnect;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA861BE42EA531B000C50B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA861BE52EA531B000C50B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA861BE72EA531B000C50B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstraConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA861BE82EA531B000C50B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstraConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAD15CF42EA7CEC200868987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AstractConnectExample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAD15CF52EA7CEC200868987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AstractConnectExample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAD15CF72EA7CEC200868987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstractConnectExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstractConnectExample";
+			};
+			name = Debug;
+		};
+		DAD15CF82EA7CEC200868987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstractConnectExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AstractConnectExample";
+			};
+			name = Release;
+		};
+		DAD15CFA2EA7CEC200868987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AstractConnectExample;
+			};
+			name = Debug;
+		};
+		DAD15CFB2EA7CEC200868987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BCSuite.AstractConnectExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AstractConnectExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA861BC82EA531B000C50B77 /* Build configuration list for PBXProject "AstraConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA861BE42EA531B000C50B77 /* Debug */,
+				DA861BE52EA531B000C50B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA861BE12EA531B000C50B77 /* Build configuration list for PBXNativeTarget "AstraConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA861BE22EA531B000C50B77 /* Debug */,
+				DA861BE32EA531B000C50B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA861BE62EA531B000C50B77 /* Build configuration list for PBXNativeTarget "AstraConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA861BE72EA531B000C50B77 /* Debug */,
+				DA861BE82EA531B000C50B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD15CF32EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD15CF42EA7CEC200868987 /* Debug */,
+				DAD15CF52EA7CEC200868987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD15CF62EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD15CF72EA7CEC200868987 /* Debug */,
+				DAD15CF82EA7CEC200868987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD15CF92EA7CEC200868987 /* Build configuration list for PBXNativeTarget "AstractConnectExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD15CFA2EA7CEC200868987 /* Debug */,
+				DAD15CFB2EA7CEC200868987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA861BC52EA531B000C50B77 /* Project object */;
+}
