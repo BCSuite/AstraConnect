@@ -9,7 +9,7 @@
 import Foundation
 
 /// Transaction-level rewards, the official doc is: https://solana.com/docs/rpc/json-structures#token-balances
-public struct ACSolanaTxReward: Codable {
+public struct ACSolanaTxReward: Codable, Sendable {
     
     /// The public key, as base-58 encoded string, of the account that received the reward.
     public var pubkey: String

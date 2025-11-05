@@ -9,7 +9,7 @@ import Foundation
 
 /// A model represents the token balance of an SPL Token account.
 /// The official doc is https://solana.com/docs/rpc/http/gettokenaccountbalance.
-public struct ACSolanaTokenAccountBalance: Codable {
+public struct ACSolanaTokenAccountBalance: Codable, Sendable {
     
     /// The raw balance without decimals, a string representation of UInt64.
     public var amount: String

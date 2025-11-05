@@ -18,7 +18,7 @@ import Foundation
  */
 /// A model represents the informations of the current inflation governor.
 /// The official doc is https://solana.com/docs/rpc/http/getinflationgovernor
-public struct ACSolanaInflationGovernor: Codable {
+public struct ACSolanaInflationGovernor: Codable, Sendable {
     
     /// Percentage of total inflation allocated to the foundation.
     public var foundation: Double

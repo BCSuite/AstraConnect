@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents the information about the current supply.
-public struct ACSolanaSupplyInfo: Codable {
+public struct ACSolanaSupplyInfo: Codable, Sendable {
     
     /// Circulating supply in lamports.
     public var circulating: UInt64

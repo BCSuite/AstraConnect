@@ -10,7 +10,7 @@ import Foundation
 
 /// A model represents the the inflation / staking reward of an epoch. The official
 /// doc is https://solana.com/docs/rpc/http/getinflationreward
-public struct ACSolanaInflationReward: Codable {
+public struct ACSolanaInflationReward: Codable, Sendable {
     
     /// Epoch for which reward occurred.
     public var epoch: UInt64

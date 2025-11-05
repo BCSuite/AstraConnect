@@ -11,7 +11,7 @@ import Foundation
 public enum ACCoderDefaultFactory: ACEncoderGeneratable {
     
     /// A map represents related ACURLRequestBuilders for different data.
-    public static let coderMap: [String: any ACEncodable] = [ACRPCJSONData.typeName: ACJSONCoder()]
+    nonisolated(unsafe) public static let coderMap: [String: any ACEncodable] = [ACRPCJSONData.typeName: ACJSONCoder()]
     
     /// Generate any ACCodable according to ACRPCDataRepresentable.
     /// - Parameter dataInfo: Data informations.

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents informations about simulated transaction.
-public struct ACSolanasimulationTxInfo: Codable {
+public struct ACSolanasimulationTxInfo: Codable, Sendable {
     
     /// Array of accounts with the same length as the accounts.addresses array in the request.
     public var accounts: [ACSolanaAccountInfo]?

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents the account info and associated stake for all the voting accounts in the current bank.
-public struct ACSolanaVoteAccountInfo: Codable {
+public struct ACSolanaVoteAccountInfo: Codable, Sendable {
     
     /// The stake, in lamports, delegated to this vote account and active in this epoch.
     public var activatedStake: UInt64

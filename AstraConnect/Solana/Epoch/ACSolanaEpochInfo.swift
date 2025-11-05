@@ -19,7 +19,7 @@ import Foundation
  */
 /// A model represents the information about the current epoch, details are shown above.
 /// The offical link is https://solana.com/docs/rpc/http/getepochinfo.
-public struct ACSolanaEpochInformation: Codable {
+public struct ACSolanaEpochInformation: Codable, Sendable {
     
     /// The current slot.
     public var absoluteSlot: UInt64

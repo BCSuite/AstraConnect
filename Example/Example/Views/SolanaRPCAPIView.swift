@@ -985,6 +985,7 @@ class TxSimulationModel {
     let eventDesc = "Simulate Tx"
 }
 
+@MainActor
 @Observable
 class SolanaViewModel {
     var rpcAddr: String
@@ -1158,7 +1159,7 @@ class SolanaViewModel {
     }
     
     func getBalance() {
-        Task {
+        Task { [solInteractor] in
             guard !balanceModel.gettingBalance else {
                 return
             }
@@ -1166,7 +1167,7 @@ class SolanaViewModel {
             do {
                 let balance = try await solInteractor.getBalance(of: acctAddr, optionalParams: ACSolanaBasicOptionalParams(commitment: ACSolanaRPCAPI.StateCommitment.finalized, minContextSlot: 10), rpcAddress: rpcInfoModel.address)
                 print("current balance:\(balance)")
-                self.balanceModel.balance = balance
+                balanceModel.balance = balance
             } catch {
                 if let acError = error as? ACError<Int, String> {
                     print(acError.description)
@@ -1180,7 +1181,7 @@ class SolanaViewModel {
     }
     
     func getAccountInfo() {
-        Task {
+        Task { [solInteractor] in
             guard !acctInfoModel.gettingAcctInfo else {
                 return
             }
@@ -1190,15 +1191,16 @@ class SolanaViewModel {
                                                                       optionalParams: ACSolanaAccountOptionalParams(commitment: ACSolanaRPCAPI.StateCommitment.finalized, encoding: ACSolanaRPCAPI.encodingKind.base58, dataSlice: ACSolanaDataSlice(length: 126, offset: 0), minContextSlot: 10), rpcAddress: rpcInfoModel.address)
                 print("current account info:\(acctInfo)")
                 acctInfoModel.acctInfo = acctInfo
+//                acctInfoModel.acctInfo = acctInfo
             } catch {
                 print("getAccountInfo failed with error: \(error)")
             }
             acctInfoModel.gettingAcctInfo = false
         }
     }
-    
+
     func getBlock() {
-        Task {
+        Task { [solInteractor] in
             guard !blockInfoModel.gettingBlkInfo else {
                 return
             }
@@ -1213,10 +1215,14 @@ class SolanaViewModel {
                                                                      encoding: ACSolanaRPCAPI.encodingKind.base58,
                                                                      transactionDetails: ACSolanaRPCAPI.TxDetail.full.rawValue,
                                                                      maxSupportedTransactionVersion: ACSolanaRPCAPI.maxSupportedTransactionVersion, rewards: true)
+                
                 let blockInfo = try await solInteractor.getBlock(by: slotNum,
                                                                  optionalParams: optionalParams, rpcAddress: rpcInfoModel.address)
-                print("slot:\(blockInfoModel.slotNumStr)'s blockInfo \(blockInfo)")
-                blockInfoModel.blockInfo = blockInfo
+                await MainActor.run {
+                    blockInfoModel.blockInfo = blockInfo  // Safe!
+                    }
+//                print("slot:\(blockInfoModel.slotNumStr)'s blockInfo \(blockInfo)")
+//                blockInfoModel.blockInfo = blockInfo
             } catch {
                 print("getBlock failed with error \(error)")
             }
@@ -1225,7 +1231,7 @@ class SolanaViewModel {
     }
     
     func getBlockCommitment() {
-        Task {
+        Task { [solInteractor] in
             guard !blkCmmitMode.gettingBlkCommit else {
                 return
             }
@@ -1246,7 +1252,7 @@ class SolanaViewModel {
     }
     
     func getCurrentBlockHeight() {
-        Task {
+        Task { [solInteractor] in
             guard !curBlkHeightModel.gettingBlkHeight else {
                 return
             }
@@ -1264,7 +1270,7 @@ class SolanaViewModel {
     }
     
     func getBlockProduction() {
-        Task {
+        Task { [solInteractor] in
             guard !blkProdModel.gettingBlkProd else {
                 return
             }
@@ -1282,7 +1288,7 @@ class SolanaViewModel {
     }
     
     func getBlocks() {
-        Task {
+        Task { [solInteractor] in
             guard !blocksModel.gettingBlocks else {
                 return
             }
@@ -1300,7 +1306,7 @@ class SolanaViewModel {
     }
     
     func getLimitdBlocks() {
-        Task {
+        Task { [solInteractor] in
             guard !limitedBlocksModel.gettingBlocks else {
                 return
             }
@@ -1318,7 +1324,7 @@ class SolanaViewModel {
     
     
     func getBlockTime() {
-        Task {
+        Task { [solInteractor] in
             guard !blockTimeModel.gettingBlkTime else {
                 return
             }
@@ -1335,7 +1341,7 @@ class SolanaViewModel {
     }
     
     func getClusterNodes() {
-        Task {
+        Task { [solInteractor] in
             guard !nodesModel.gettingNodes else {
                 return
             }
@@ -1352,7 +1358,7 @@ class SolanaViewModel {
     }
     
     func getCurEpochInfo() {
-        Task {
+        Task { [solInteractor] in
             guard !curEpochInfoModel.gettingEpochInfo else {
                 return
             }
@@ -1369,7 +1375,7 @@ class SolanaViewModel {
     }
     
     func getEpochScheduleInfo() {
-        Task {
+        Task { [solInteractor] in
             guard !epochScheduleInfoModel.gettingEpochScheduleInfo else {
                 return
             }
@@ -1386,7 +1392,7 @@ class SolanaViewModel {
     }
     
     func getFeeForMessage() {
-        Task {
+        Task { [solInteractor] in
             guard !feeForMessageModel.gettingFeeForMessag else {
                 return
             }
@@ -1402,7 +1408,7 @@ class SolanaViewModel {
     }
     
     func getFirstAvailableBlock() {
-        Task {
+        Task { [solInteractor] in
             guard !firstAvailableBlockModel.gettingFirstAvailableBlock else {
                 return
             }
@@ -1419,7 +1425,7 @@ class SolanaViewModel {
     }
     
     func getGenesisHash() {
-        Task {
+        Task { [solInteractor] in
             guard !genesisHashModel.gettingGenesisHash else {
                 return
             }
@@ -1436,7 +1442,7 @@ class SolanaViewModel {
     }
     
     func getHealth() {
-        Task {
+        Task { [solInteractor] in
             guard !healthModel.gettingHealth else {
                 return
             }
@@ -1453,7 +1459,7 @@ class SolanaViewModel {
     }
     
     func getHighestSnapshotSlot() {
-        Task {
+        Task { [solInteractor] in
             guard !highestSlotModel.gettingSlot else {
                 return
             }
@@ -1470,7 +1476,7 @@ class SolanaViewModel {
     }
     
     func getNodeIdentity() {
-        Task {
+        Task { [solInteractor] in
             guard !nodeIdModel.gettingIdentity else {
                 return
             }
@@ -1487,7 +1493,7 @@ class SolanaViewModel {
     }
     
     func getInflationGovernor() {
-        Task {
+        Task { [solInteractor] in
             guard !infGovernorModel.gettingGovernor else {
                 return
             }
@@ -1504,7 +1510,7 @@ class SolanaViewModel {
     }
     
     func getInflationRate() {
-        Task {
+        Task { [solInteractor] in
             guard !infRateModel.gettingRate else {
                 return
             }
@@ -1521,7 +1527,7 @@ class SolanaViewModel {
     }
     
     func getInflationReward() {
-        Task {
+        Task { [solInteractor] in
             guard !infRewardModel.gettingReward else {
                 return
             }
@@ -1539,7 +1545,7 @@ class SolanaViewModel {
     }
     
     func getLargestAccounts() {
-        Task {
+        Task { [solInteractor] in
             guard !largAcctsModel.gettingAccounts else {
                 return
             }
@@ -1556,7 +1562,7 @@ class SolanaViewModel {
     }
     
     func getLatestBlockInfo() {
-        Task {
+        Task { [solInteractor] in
             guard !latestBlkInfoModel.gettingBlkInfo else {
                 return
             }
@@ -1573,7 +1579,7 @@ class SolanaViewModel {
     }
     
     func getLeaderSchedule() {
-        Task {
+        Task { [solInteractor] in
             guard !leaderScheduleModel.gettingSchedule else {
                 return
             }
@@ -1590,7 +1596,7 @@ class SolanaViewModel {
     }
     
     func getMaxRetransmitSlot() {
-        Task {
+        Task { [solInteractor] in
             guard !maxRetransmitSlotModel.gettingSlot else {
                 return
             }
@@ -1607,7 +1613,7 @@ class SolanaViewModel {
     }
     
     func getMaxShredInsertSlot() {
-        Task {
+        Task { [solInteractor] in
             guard !maxSharedInsertSlotModel.gettingSlot else {
                 return
             }
@@ -1624,7 +1630,7 @@ class SolanaViewModel {
     }
     
     func getMinmBalanceForRentExemption() {
-        Task {
+        Task { [solInteractor] in
             guard !minBalForRentExemptionModel.gettingBalance else {
                 return
             }
@@ -1642,7 +1648,7 @@ class SolanaViewModel {
     }
     
     func getMultipleAccountsInfo() {
-        Task {
+        Task { [solInteractor] in
             guard !acctsInfoModel.gettingAcctsInfo else {
                 return
             }
@@ -1650,7 +1656,7 @@ class SolanaViewModel {
             do {
                 let acctsInfo = try await solInteractor.getMultipleAccounts(pubKeys: acctsInfoModel.pubKeys,
                                                                             optionalParams: ACSolanaAccountOptionalParams(commitment: ACSolanaRPCAPI.StateCommitment.finalized, encoding: ACSolanaRPCAPI.encodingKind.base58, dataSlice: ACSolanaDataSlice(length: 126, offset: 0), minContextSlot: 10), rpcAddress: rpcInfoModel.address)
-                print("Multiple account info:\(acctsInfo)")
+                print("Multiple account info:\(String(describing: acctsInfo))")
                 acctsInfoModel.acctsInfo = acctsInfo
             } catch {
                 print("getAccountsInfo failed with error: \(error)")
@@ -1660,7 +1666,7 @@ class SolanaViewModel {
     }
     
     func getProgramAccounts() {
-        Task {
+        Task { [solInteractor] in
             guard !programAccountsModel.gettingAcctsInfo else {
                 return
             }
@@ -1677,7 +1683,7 @@ class SolanaViewModel {
     }
     
     func getRecentPerformanceSamples() {
-        Task {
+        Task { [solInteractor] in
             guard !performanceSamplesModel.gettingSamples else {
                 return
             }
@@ -1694,7 +1700,7 @@ class SolanaViewModel {
     }
     
     func getRecentPrioritizationFees() {
-        Task {
+        Task { [solInteractor] in
             guard !prioriFeesModel.gettingFees else {
                 return
             }
@@ -1715,7 +1721,7 @@ class SolanaViewModel {
     }
     
     func getSignaturesForAddress() {
-        Task {
+        Task { [solInteractor] in
             guard !signaturesModel.gettingSignatures else {
                 return
             }
@@ -1732,7 +1738,7 @@ class SolanaViewModel {
     }
     
     func getSignatureStatuses() {
-        Task {
+        Task { [solInteractor] in
             guard !signatureStatusesModel.gettingStatuses else {
                 return
             }
@@ -1749,7 +1755,7 @@ class SolanaViewModel {
     }
     
     func getSlot() {
-        Task {
+        Task { [solInteractor] in
             guard !slotModel.gettingSlot else {
                 return
             }
@@ -1766,7 +1772,7 @@ class SolanaViewModel {
     }
     
     func getSlotLeader() {
-        Task {
+        Task { [solInteractor] in
             guard !slotLeaderModel.gettingSlotLeader else {
                 return
             }
@@ -1783,7 +1789,7 @@ class SolanaViewModel {
     }
     
     func getSlotLeaders() {
-        Task {
+        Task { [solInteractor] in
             guard !slotLeadersModel.gettingSlotLeaders else {
                 return
             }
@@ -1801,7 +1807,7 @@ class SolanaViewModel {
     }
     
     func getStakeMinimumDelegation() {
-        Task {
+        Task { [solInteractor] in
             guard !stakeMinDelegationModel.gettingelegation else {
                 return
             }
@@ -1818,7 +1824,7 @@ class SolanaViewModel {
     }
     
     func getSupply() {
-        Task {
+        Task { [solInteractor] in
             guard !supplyModel.gettingSupply else {
                 return
             }
@@ -1835,7 +1841,7 @@ class SolanaViewModel {
     }
     
     func getTokenAccountBalance() {
-        Task {
+        Task { [solInteractor] in
             guard !tokenAcctBalanceModel.gettingBalance else {
                 return
             }
@@ -1852,7 +1858,7 @@ class SolanaViewModel {
     }
     
     func getTokenAccountsByDelegate() {
-        Task {
+        Task { [solInteractor] in
             guard !tokenAcctsByDelegateModel.gettingAccounts else {
                 return
             }
@@ -1869,7 +1875,7 @@ class SolanaViewModel {
     }
     
     func getTokenAccountsByOwner() {
-        Task {
+        Task { [solInteractor] in
             guard !tokenAcctsByOwnerModel.gettingAccounts else {
                 return
             }
@@ -1886,7 +1892,7 @@ class SolanaViewModel {
     }
     
     func getTokenLargestAccounts() {
-        Task {
+        Task { [solInteractor] in
             guard !tokenLargestAccountsModel.gettingAccounts else {
                 return
             }
@@ -1903,7 +1909,7 @@ class SolanaViewModel {
     }
     
     func getTokenSupply() {
-        Task {
+        Task { [solInteractor] in
             guard !tokenSupplyModel.gettingSupply else {
                 return
             }
@@ -1920,14 +1926,14 @@ class SolanaViewModel {
     }
     
     func getTransaction() {
-        Task {
+        Task { [solInteractor] in
             guard !txDetailsModel.gettingDetails else {
                 return
             }
             txDetailsModel.gettingDetails = true
             do {
                 let txDetails = try await solInteractor.getTransaction(txID: txDetailsModel.txID, optionalParams: ACSolanaGetTransaction.OptionalParams(commitment: txDetailsModel.commitment, encoding: txDetailsModel.encoding), rpcAddress: rpcInfoModel.address)
-                print("Tx Details:\(txDetails)")
+                print("Tx Details:\(String(describing: txDetails))")
                 txDetailsModel.details = txDetails
             } catch {
                 print("getTransaction failed with error: \(error)")
@@ -1937,7 +1943,7 @@ class SolanaViewModel {
     }
     
     func getTxCount() {
-        Task {
+        Task { [solInteractor] in
             guard !txCountModel.gettingCount else {
                 return
             }
@@ -1954,7 +1960,7 @@ class SolanaViewModel {
     }
     
     func getVersion() {
-        Task {
+        Task { [solInteractor] in
             guard !versionModel.gettingVersion else {
                 return
             }
@@ -1971,7 +1977,7 @@ class SolanaViewModel {
     }
     
     func getVoteAccounts() {
-        Task {
+        Task { [solInteractor] in
             guard !voteAccountsModel.gettingVoteAccounts else {
                 return
             }
@@ -1988,7 +1994,7 @@ class SolanaViewModel {
     }
         
     func checkIsBlockhashValid() {
-        Task {
+        Task { [solInteractor] in
             guard !blockhashValidModel.checking else {
                 return
             }
@@ -2005,7 +2011,7 @@ class SolanaViewModel {
     }
     
     func getMinLedgerSlot() {
-        Task {
+        Task { [solInteractor] in
             guard !minLedgerSlotModel.gettingSlot else {
                 return
             }
@@ -2022,7 +2028,7 @@ class SolanaViewModel {
     }
     
     func requestAirdrop() {
-        Task {
+        Task { [solInteractor] in
             guard !airdropRequestModel.requesting else {
                 return
             }
@@ -2040,7 +2046,7 @@ class SolanaViewModel {
     }
     
     func sendTx() {
-        Task {
+        Task { [solInteractor] in
             guard !sendTxModel.sending else {
                 return
             }
@@ -2057,7 +2063,7 @@ class SolanaViewModel {
     }
     
     func simulateTx() {
-        Task {
+        Task { [solInteractor] in
             guard !txSimulationModel.simulating else {
                 return
             }

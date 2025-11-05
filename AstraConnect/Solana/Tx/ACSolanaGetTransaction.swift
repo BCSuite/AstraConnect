@@ -14,7 +14,7 @@ public enum ACSolanaGetTransaction {
     /// Name of the getTransaction RPC method.
     public static let methodName = "getTransaction"
     
-    public struct OptionalParams: Codable {
+    public struct OptionalParams: Codable, Sendable {
         
         /// Type description of Configuring State Commitment.
         public var commitment: ACSolanaRPCAPI.StateCommitment

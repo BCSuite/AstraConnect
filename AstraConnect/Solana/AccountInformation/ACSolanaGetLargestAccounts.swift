@@ -41,7 +41,7 @@ public enum ACSolanaGetLargestAccounts {
      */
     
     /// A model represents largest accounts, by lamport balance.
-    public struct Info: Codable {
+    public struct Info: Codable, Sendable {
         
         /// Base-58 encoded address of the account
         public var address: String

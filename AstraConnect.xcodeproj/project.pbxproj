@@ -96,11 +96,6 @@
 		DA33947C2EB73D89001978FA /* ACSolanaSendTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947B2EB73D89001978FA /* ACSolanaSendTransaction.swift */; };
 		DA33947E2EB75393001978FA /* ACSolanasimulationTxInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947D2EB75393001978FA /* ACSolanasimulationTxInfo.swift */; };
 		DA3394802EB755BC001978FA /* ACSolanaSimulateTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33947F2EB755BC001978FA /* ACSolanaSimulateTransaction.swift */; };
-		DA33948F2EB76209001978FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3394872EB76209001978FA /* Preview Assets.xcassets */; };
-		DA3394902EB76209001978FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA33948D2EB76209001978FA /* Assets.xcassets */; };
-		DA3394912EB76209001978FA /* ChainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33948A2EB76209001978FA /* ChainListView.swift */; };
-		DA3394922EB76209001978FA /* SolanaRPCAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */; };
-		DA3394932EB76209001978FA /* AstractConnectExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */; };
 		DA3394982EB79F8C001978FA /* ACRPCResponsive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394972EB79F8C001978FA /* ACRPCResponsive.swift */; };
 		DA33949A2EB7A359001978FA /* ACSolanaJSONRPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394992EB7A359001978FA /* ACSolanaJSONRPCError.swift */; };
 		DA33949C2EB841BF001978FA /* ACRPCResponseBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33949B2EB841BF001978FA /* ACRPCResponseBuildable.swift */; };
@@ -115,6 +110,7 @@
 		DA3394AE2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394AD2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift */; };
 		DA3394B02EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394AF2EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift */; };
 		DA3394B22EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394B12EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift */; };
+		DA3394B42EBA271A001978FA /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3394B32EBA271A001978FA /* Package.swift */; };
 		DA404B302EA9CEFC00F2FA12 /* ACDynamicCodation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B2F2EA9CEFC00F2FA12 /* ACDynamicCodation.swift */; };
 		DA404B322EAA285D00F2FA12 /* ACSolanaGetBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B312EAA285D00F2FA12 /* ACSolanaGetBlock.swift */; };
 		DA404B892EAB624500F2FA12 /* ACSolanaGetBlockCommitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404B882EAB624400F2FA12 /* ACSolanaGetBlockCommitment.swift */; };
@@ -158,8 +154,6 @@
 		DAD15CC92EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CC82EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift */; };
 		DAD15CCB2EA7C34900868987 /* ACSolanaGetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CCA2EA7C34900868987 /* ACSolanaGetBalance.swift */; };
 		DAD15CCD2EA7C89800868987 /* ACSolanaRPCAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15CCC2EA7C89800868987 /* ACSolanaRPCAPI.swift */; };
-		DAD15CFD2EA7CEF100868987 /* AstraConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */; };
-		DAD15CFE2EA7CEF100868987 /* AstraConnect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA861BCE2EA531B000C50B77 /* AstraConnect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAD15D032EA7DD2400868987 /* ACEncoderGeneratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D022EA7DD2400868987 /* ACEncoderGeneratable.swift */; };
 		DAD15D052EA7DD9300868987 /* ACEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D042EA7DD9300868987 /* ACEncodable.swift */; };
 		DAD15D072EA7DE5900868987 /* ACJSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD15D062EA7DE5900868987 /* ACJSONCoder.swift */; };
@@ -191,28 +185,7 @@
 			remoteGlobalIDString = DAD15CD12EA7CEC100868987;
 			remoteInfo = AstractConnectExample;
 		};
-		DAD15CFF2EA7CEF100868987 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA861BC52EA531B000C50B77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA861BCD2EA531B000C50B77;
-			remoteInfo = AstraConnect;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		DAD15D012EA7CEF100868987 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DAD15CFE2EA7CEF100868987 /* AstraConnect.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA3393772EABB423001978FA /* ACSolanaInstructionReturnData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaInstructionReturnData.swift; sourceTree = "<group>"; };
@@ -304,11 +277,6 @@
 		DA33947B2EB73D89001978FA /* ACSolanaSendTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSendTransaction.swift; sourceTree = "<group>"; };
 		DA33947D2EB75393001978FA /* ACSolanasimulationTxInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanasimulationTxInfo.swift; sourceTree = "<group>"; };
 		DA33947F2EB755BC001978FA /* ACSolanaSimulateTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaSimulateTransaction.swift; sourceTree = "<group>"; };
-		DA3394872EB76209001978FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstractConnectExampleApp.swift; sourceTree = "<group>"; };
-		DA33948A2EB76209001978FA /* ChainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainListView.swift; sourceTree = "<group>"; };
-		DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolanaRPCAPIView.swift; sourceTree = "<group>"; };
-		DA33948D2EB76209001978FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3394972EB79F8C001978FA /* ACRPCResponsive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCResponsive.swift; sourceTree = "<group>"; };
 		DA3394992EB7A359001978FA /* ACSolanaJSONRPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONRPCError.swift; sourceTree = "<group>"; };
 		DA33949B2EB841BF001978FA /* ACRPCResponseBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRPCResponseBuildable.swift; sourceTree = "<group>"; };
@@ -323,6 +291,7 @@
 		DA3394AD2EB8B6CC001978FA /* ACSolanaJSONReqBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaJSONReqBuilder.swift; sourceTree = "<group>"; };
 		DA3394AF2EB8B8D2001978FA /* ACSolanaReqBuilderDefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaReqBuilderDefaultFactory.swift; sourceTree = "<group>"; };
 		DA3394B12EB8DA87001978FA /* ACSolanaReqDataStreamParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaReqDataStreamParams.swift; sourceTree = "<group>"; };
+		DA3394B32EBA271A001978FA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DA404B2F2EA9CEFC00F2FA12 /* ACDynamicCodation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDynamicCodation.swift; sourceTree = "<group>"; };
 		DA404B312EAA285D00F2FA12 /* ACSolanaGetBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlock.swift; sourceTree = "<group>"; };
 		DA404B882EAB624400F2FA12 /* ACSolanaGetBlockCommitment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSolanaGetBlockCommitment.swift; sourceTree = "<group>"; };
@@ -385,16 +354,6 @@
 			path = AstraConnectTests;
 			sourceTree = "<group>";
 		};
-		DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AstractConnectExampleTests;
-			sourceTree = "<group>";
-		};
-		DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AstractConnectExampleUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,7 +376,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD15CFD2EA7CEF100868987 /* AstraConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,50 +782,6 @@
 			path = Airdrop;
 			sourceTree = "<group>";
 		};
-		DA3394882EB76209001978FA /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				DA3394872EB76209001978FA /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		DA33948C2EB76209001978FA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DA33948E2EB76209001978FA /* AstractConnectExample */ = {
-			isa = PBXGroup;
-			children = (
-				DA3394952EB76277001978FA /* App */,
-				DA3394942EB7623F001978FA /* Solana */,
-				DA3394882EB76209001978FA /* Preview Content */,
-				DA33948C2EB76209001978FA /* Views */,
-				DA33948D2EB76209001978FA /* Assets.xcassets */,
-			);
-			path = AstractConnectExample;
-			sourceTree = "<group>";
-		};
-		DA3394942EB7623F001978FA /* Solana */ = {
-			isa = PBXGroup;
-			children = (
-				DA33948B2EB76209001978FA /* SolanaRPCAPIView.swift */,
-			);
-			path = Solana;
-			sourceTree = "<group>";
-		};
-		DA3394952EB76277001978FA /* App */ = {
-			isa = PBXGroup;
-			children = (
-				DA3394892EB76209001978FA /* AstractConnectExampleApp.swift */,
-				DA33948A2EB76209001978FA /* ChainListView.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		DA3394962EB79F5D001978FA /* Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,11 +795,9 @@
 		DA861BC42EA531B000C50B77 = {
 			isa = PBXGroup;
 			children = (
-				DA33948E2EB76209001978FA /* AstractConnectExample */,
+				DA3394B32EBA271A001978FA /* Package.swift */,
 				DA861BFE2EA5DA9300C50B77 /* AstraConnect */,
 				DA861BDC2EA531B000C50B77 /* AstraConnectTests */,
-				DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */,
-				DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */,
 				DAD15CFC2EA7CEF100868987 /* Frameworks */,
 				DA861BCF2EA531B000C50B77 /* Products */,
 			);
@@ -1121,12 +1033,10 @@
 				DAD15CCE2EA7CEC100868987 /* Sources */,
 				DAD15CCF2EA7CEC100868987 /* Frameworks */,
 				DAD15CD02EA7CEC100868987 /* Resources */,
-				DAD15D012EA7CEF100868987 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DAD15D002EA7CEF100868987 /* PBXTargetDependency */,
 			);
 			name = AstractConnectExample;
 			packageProductDependencies = (
@@ -1148,9 +1058,6 @@
 			dependencies = (
 				DAD15CE32EA7CEC200868987 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DAD15CE42EA7CEC200868987 /* AstractConnectExampleTests */,
-			);
 			name = AstractConnectExampleTests;
 			packageProductDependencies = (
 			);
@@ -1170,9 +1077,6 @@
 			);
 			dependencies = (
 				DAD15CED2EA7CEC200868987 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DAD15CEE2EA7CEC200868987 /* AstractConnectExampleUITests */,
 			);
 			name = AstractConnectExampleUITests;
 			packageProductDependencies = (
@@ -1219,6 +1123,9 @@
 			);
 			mainGroup = DA861BC42EA531B000C50B77;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA5F48FB2EBB3998004A3CB5 /* XCLocalSwiftPackageReference "../AstraConnect" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA861BCF2EA531B000C50B77 /* Products */;
 			projectDirPath = "";
@@ -1252,8 +1159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA33948F2EB76209001978FA /* Preview Assets.xcassets in Resources */,
-				DA3394902EB76209001978FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1282,6 +1187,7 @@
 				DAD15D052EA7DD9300868987 /* ACEncodable.swift in Sources */,
 				DA3393842EABB608001978FA /* ACSolanaUiTokenAmount.swift in Sources */,
 				DA3394982EB79F8C001978FA /* ACRPCResponsive.swift in Sources */,
+				DA3394B42EBA271A001978FA /* Package.swift in Sources */,
 				DAD15CC92EA7BEC800868987 /* ACSolanaJSONRPCResponse.swift in Sources */,
 				DAD15C962EA66D3B00868987 /* ACURLRequestBuildable.swift in Sources */,
 				DA3394222EB44F72001978FA /* ACSolanaGetRecentPerformanceSamples.swift in Sources */,
@@ -1443,9 +1349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3394912EB76209001978FA /* ChainListView.swift in Sources */,
-				DA3394922EB76209001978FA /* SolanaRPCAPIView.swift in Sources */,
-				DA3394932EB76209001978FA /* AstractConnectExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1481,11 +1384,6 @@
 			target = DAD15CD12EA7CEC100868987 /* AstractConnectExample */;
 			targetProxy = DAD15CEC2EA7CEC200868987 /* PBXContainerItemProxy */;
 		};
-		DAD15D002EA7CEF100868987 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA861BCD2EA531B000C50B77 /* AstraConnect */;
-			targetProxy = DAD15CFF2EA7CEF100868987 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -1500,6 +1398,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1517,7 +1416,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1533,6 +1433,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1550,7 +1451,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1896,6 +1798,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		DA5F48FB2EBB3998004A3CB5 /* XCLocalSwiftPackageReference "../AstraConnect" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AstraConnect;
+		};
+/* End XCLocalSwiftPackageReference section */
 	};
 	rootObject = DA861BC52EA531B000C50B77 /* Project object */;
 }

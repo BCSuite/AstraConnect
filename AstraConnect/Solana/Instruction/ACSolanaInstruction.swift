@@ -9,7 +9,7 @@
 import Foundation
 
 /// Program instructions that will be executed in sequence and committed in one atomic transaction if all succeed.
-public struct ACSolanaInstruction: Codable {
+public struct ACSolanaInstruction: Codable, Sendable {
     
     ///  Index into the message.accountKeys array indicating the program account that executes this instruction.
     public var programIdIndex: UInt64?

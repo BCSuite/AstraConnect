@@ -13,7 +13,7 @@ import Foundation
  */
 /// A model represents prioritization fee related information.
 /// The official is https://solana.com/docs/rpc/http/getrecentprioritizationfees.
-public struct ACSolanaPrioritizationFeeInfo: Codable {
+public struct ACSolanaPrioritizationFeeInfo: Codable, Sendable {
     
     /// The per-compute-unit fee paid by at least one successfully landed transaction, specified in increments of micro-lamports (0.000001 lamports).
     public var prioritizationFee: UInt64

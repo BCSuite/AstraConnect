@@ -18,7 +18,7 @@ import Foundation
  */
 /// A model represents the data structure of the epoch schedule information from this cluster, details are shown as above.
 /// The official doc is https://solana.com/docs/rpc/http/getepochschedule.
-public struct ACSolanaEpochScheduleInformation: Codable {
+public struct ACSolanaEpochScheduleInformation: Codable, Sendable {
     
     /// First normal-length epoch, log2(slotsPerEpoch) - log2(MINIMUM_SLOTS_PER_EPOCH).
     public var firstNormalEpoch: UInt64

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents the transaction details for a confirmed transaction.
-public struct ACSolanaTxDetails: Codable {
+public struct ACSolanaTxDetails: Codable, Sendable {
     
     /// Estimated production time, as Unix timestamp (seconds since the Unix epoch) of when the transaction was processed. null if not available.
     public var blockTime: UInt64?

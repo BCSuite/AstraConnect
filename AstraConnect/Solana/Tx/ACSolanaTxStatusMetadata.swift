@@ -28,7 +28,7 @@ import Foundation
  */
 /// Transaction status metadata, details are shown above. Offical link is:
 /// https://solana.com/docs/rpc/json-structures#transaction-status-metadata
-public struct ACSolanaTxStatusMetadata: Codable {
+public struct ACSolanaTxStatusMetadata: Codable, Sendable {
     
     /// Error if transaction failed, null if transaction succeeded.
     public var err: ACDynamicCodation

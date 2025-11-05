@@ -19,7 +19,7 @@ import Foundation
 /// A model represents recent performance sample taken every 60 seconds and include the number of
 /// transactions and slots that occur in a given time window.
 /// The official doc is https://solana.com/docs/rpc/http/getrecentperformancesamples.
-public struct ACSolanaPerformanceSample: Codable {
+public struct ACSolanaPerformanceSample: Codable, Sendable {
     
     /// Number of non-vote transactions processed during the sample period.
     public var numNonVoteTransactions: UInt64

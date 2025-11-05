@@ -11,7 +11,7 @@ import Foundation
 public enum ACURLRequestBuilderFactory: ACURLRequestBuilderGeneratable {
     
     /// A map represents related ACURLRequestBuilders for different RequestWay.
-    public static let builderMap = [ACPOSTRequestWay.POSTMethodDesc: ACPOSTURLRequestBuilder()]
+    nonisolated(unsafe) public static let builderMap = [ACPOSTRequestWay.POSTMethodDesc: ACPOSTURLRequestBuilder()]
     
     /// Generate a ACURLRequestBuildable according to the RequestWay.
     /// - Parameter requestWay: Detailed way to send a request.

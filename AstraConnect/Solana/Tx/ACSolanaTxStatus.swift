@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents the transaction status.
-public struct ACSolanaTxStatus: Codable {
+public struct ACSolanaTxStatus: Codable, Sendable {
     
     /// Transaction was successful.
     public var ok: ACDynamicCodation?

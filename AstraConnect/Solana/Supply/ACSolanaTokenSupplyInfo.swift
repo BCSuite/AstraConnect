@@ -9,7 +9,7 @@ import Foundation
 
 /// A model represents the total supply information of an SPL Token type.
 ///  The official doc is https://solana.com/docs/rpc/http/gettokensupply.
-public struct ACSolanaTokenSupplyInfo: Codable {
+public struct ACSolanaTokenSupplyInfo: Codable, Sendable {
 
     /// The raw total token supply without decimals, a string representation of UInt64.
     public var amount: String

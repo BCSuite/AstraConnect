@@ -15,7 +15,7 @@ public enum ACErrorKeys {
 }
 
 /// The Error representation.
-public struct ACError<Code, Description>: Error, LocalizedError where Code: ExpressibleByIntegerLiteral,
+public struct ACError<Code: Sendable, Description: Sendable>: Error, LocalizedError where Code: ExpressibleByIntegerLiteral,
                                                                       Description: ExpressibleByStringLiteral {
     
     /// The module in which generates a error.

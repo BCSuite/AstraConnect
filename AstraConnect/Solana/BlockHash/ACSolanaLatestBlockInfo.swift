@@ -14,7 +14,7 @@ import Foundation
  }
  */
 /// A model represents the latest block informations. The official doc is https://solana.com/docs/rpc/http/getlatestblockhash.
-public struct ACSolanaLatestBlockInfo: Codable {
+public struct ACSolanaLatestBlockInfo: Codable, Sendable {
     
     /// A Hash as base-58 encoded string.
     public var blockhash: String

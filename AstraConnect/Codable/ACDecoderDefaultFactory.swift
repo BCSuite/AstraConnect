@@ -12,7 +12,7 @@ import Foundation
 public enum ACDecoderDefaultFactory: ACDecoderGeneratable {
     
     /// A map represents related ACURLRequestBuilders for different data.
-    public static let decoderMap = [ACRPCJSONData.typeName: ACJSONDecoder()]
+    nonisolated(unsafe) public static let decoderMap = [ACRPCJSONData.typeName: ACJSONDecoder()]
     
     /// Generate any ACDecodable according to ACRPCDataRepresentable.
     /// - Parameter dataInfo: Data informations.

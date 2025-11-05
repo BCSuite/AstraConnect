@@ -17,7 +17,7 @@ import Foundation
  */
 /// A model represents specific inflation values for the current epoch.
 /// The official doc is https://solana.com/docs/rpc/http/getinflationgovernor.
-public struct ACSolanaInflationRate: Codable {
+public struct ACSolanaInflationRate: Codable, Sendable {
     
     /// Total inflation.
     public var total: Double

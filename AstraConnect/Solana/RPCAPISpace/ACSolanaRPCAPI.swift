@@ -37,7 +37,7 @@ public enum ACSolanaRPCAPI {
     //MARK: -Types
     
     /// Type description of Configuring State Commitment.
-    public enum StateCommitment: String, Codable {
+    public enum StateCommitment: String, Codable, Sendable {
         
         /// The cluster has recognized this block as finalized
         case finalized
@@ -50,7 +50,7 @@ public enum ACSolanaRPCAPI {
     }
     
     /// Type description of encoding.
-    public enum encodingKind: String, Codable {
+    public enum encodingKind: String, Codable, Sendable {
         
         /// It is slow and limited to less than 129 bytes of Account data.
         case base58
@@ -78,7 +78,7 @@ public enum ACSolanaRPCAPI {
     }
     
     /// Filter by account type
-    public enum AccountsFilterKind: String, Codable {
+    public enum AccountsFilterKind: String, Codable, Sendable {
         case circulating, nonCirculating
     }
     

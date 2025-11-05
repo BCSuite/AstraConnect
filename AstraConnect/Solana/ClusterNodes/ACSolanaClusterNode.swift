@@ -27,7 +27,7 @@ import Foundation
  */
 /// A model represent the information of a  Solana cluster node, details are shown as above.
 /// The official doc is: https://solana.com/docs/rpc/http/getclusternodes.
-public struct ACSolanaClusterNode: Codable {
+public struct ACSolanaClusterNode: Codable, Sendable {
     
     /// The unique identifier of the node's feature set.
     public var featureSet: UInt32?

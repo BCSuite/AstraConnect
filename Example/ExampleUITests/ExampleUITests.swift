@@ -1,13 +1,13 @@
 //
-//  AstractConnectExampleUITests.swift
-//  AstractConnectExampleUITests
+//  ExampleUITests.swift
+//  ExampleUITests
 //
-//  Created by scott on 2025/10/21.
+//  Created by scott on 2025/11/5.
 //
 
 import XCTest
 
-final class AstractConnectExampleUITests: XCTestCase {
+final class ExampleUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

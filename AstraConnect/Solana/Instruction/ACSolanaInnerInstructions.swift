@@ -11,7 +11,7 @@ import Foundation
 /// The Solana runtime records the cross-program instructions that are invoked during transaction processing and makes
 /// these available for greater transparency of what was executed on-chain per transaction instruction. Invoked instructions
 /// are grouped by the originating transaction instruction and are listed in order of processing.
-public struct ACSolanaInnerInstructions: Codable {
+public struct ACSolanaInnerInstructions: Codable, Sendable {
     
     /// Index of the transaction instruction from which the inner instruction(s) originated.
     public var index: UInt64

@@ -8,7 +8,7 @@
 import Foundation
  
 /// A model represents identity informations of current node. The offical doc is https://solana.com/docs/rpc/http/getidentity.
-public struct ACSolanaNodeIdentity: Codable {
+public struct ACSolanaNodeIdentity: Codable, Sendable {
     
     /// The identity pubkey of the current node (as a base-58 encoded string).
     public var identity: String

@@ -8,7 +8,7 @@
 import Foundation
 
 /// Transaction addresses loaded from address lookup tables.
-public struct ACSolanaLoadedAddresses: Codable {
+public struct ACSolanaLoadedAddresses: Codable, Sendable {
     
     /// Ordered list of base-58 encoded addresses for writable loaded accounts
     public var writable: [String]

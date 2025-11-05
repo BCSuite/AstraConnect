@@ -9,7 +9,7 @@
 import Foundation
 
 /// A model represents Solana account information.
-public struct ACSolanaAccountInfo: Codable {
+public struct ACSolanaAccountInfo: Codable, Sendable {
     
     /// Data associated with the account. Format depends on encoding parameter:
     /// 1.If the encoding parameter is left as the deprecated default of binary, this will be a string containing encoded binary data.
@@ -17,23 +17,31 @@ public struct ACSolanaAccountInfo: Codable {
     /// data string and the second element is the encoding format. If jsonParsed is specified, this will be JSON format {<program>: <state>}.
     ///
     /// Because the response value may be different type, so using ACDynamicCodation to wrap.
-    public let data: ACDynamicCodation
+    public var data: ACDynamicCodation
     
     /// Boolean indicating if the account contains a program (and is strictly read-only).
-    public let executable: Bool
+    public var executable: Bool
     
     /// Number of lamports assigned to this account.
-    public let lamports: UInt64
+    public var lamports: UInt64
     
     /// base-58 encoded Pubkey of the program this account has been assigned to.
-    public let owner: String
+    public var owner: String
     
     /// The epoch at which this account will next owe rent.
-    public let rentEpoch: UInt64
+    public var rentEpoch: UInt64
     
     /// The data size of the account.
-    public let space: UInt64
+    public var space: UInt64
     
+    /// Creaing a instance of ACSolanaAccountInfo which represents Solana account information.
+    /// - Parameters:
+    ///   - data: Data associated with the account.
+    ///   - executable: Boolean indicating if the account contains a program (and is strictly read-only).
+    ///   - lamports: Number of lamports assigned to this account.
+    ///   - owner: base-58 encoded Pubkey of the program this account has been assigned to.
+    ///   - rentEpoch: The epoch at which this account will next owe rent.
+    ///   - space: The data size of the account.
     public init(data: ACDynamicCodation,
                 executable: Bool,
                 lamports: UInt64,

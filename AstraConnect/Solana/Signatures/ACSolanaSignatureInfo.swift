@@ -19,7 +19,7 @@ import Foundation
  */
 /// A model representst signature informations of confirmed transactions.
 /// The official doc is https://solana.com/docs/rpc/http/getsignaturesforaddress.
-public struct ACSolanaSignatureInfo: Codable {
+public struct ACSolanaSignatureInfo: Codable, Sendable {
     
     /// Transaction signature as base-58 encoded string.
     public var signature: String

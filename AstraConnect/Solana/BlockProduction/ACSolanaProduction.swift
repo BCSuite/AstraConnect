@@ -24,7 +24,7 @@ import Foundation
    },
  */
 /// A model represents block production information. Deatails are shown as above.
-public struct ACSolanaProduction: Codable {
+public struct ACSolanaProduction: Codable, Sendable {
     
     /// A dictionary of validator identities, as base-58 encoded strings. Value is a two element array
     /// containing the number of leader slots and the number of blocks produced.

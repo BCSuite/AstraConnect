@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents the current Solana version running on the node.
-public struct ACSolanaNodeVersion: Codable {
+public struct ACSolanaNodeVersion: Codable, Sendable {
     
     /// Software version of solana-core.
     public var solanaCore: String

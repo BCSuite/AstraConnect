@@ -19,7 +19,7 @@ import Foundation
 
 /// Amount informations related informations of a token. The official doc is:
 /// https://solana.com/docs/rpc/json-structures#token-balances
-public struct ACSolanaUiTokenAmount: Codable {
+public struct ACSolanaUiTokenAmount: Codable, Sendable {
     
     /// Raw amount of tokens as a string, ignoring decimals.
     public var amount: String

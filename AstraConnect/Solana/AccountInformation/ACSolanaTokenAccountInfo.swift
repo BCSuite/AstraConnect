@@ -9,7 +9,7 @@ import Foundation
 
 
 /// A model represents the account information of a particular SPL Token.
-public struct ACSolanaTokenAccountInfo: Codable {
+public struct ACSolanaTokenAccountInfo: Codable, Sendable {
     
     /// The address of the token account.
     public var address: String

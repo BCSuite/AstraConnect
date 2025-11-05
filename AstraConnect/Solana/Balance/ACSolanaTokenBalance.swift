@@ -10,7 +10,7 @@ import Foundation
 
 /// Token informations including owner, amount and etc. The official doc is:
 /// https://solana.com/docs/rpc/json-structures#token-balances
-public struct ACSolanaTokenBalance: Codable {
+public struct ACSolanaTokenBalance: Codable, Sendable {
     
     ///  Index of the account in which the token balance is provided for.
     public var accountIndex: UInt64

@@ -1,13 +1,13 @@
 //
-//  AstractConnectExampleUITestsLaunchTests.swift
-//  AstractConnectExampleUITests
+//  ExampleUITestsLaunchTests.swift
+//  ExampleUITests
 //
-//  Created by scott on 2025/10/21.
+//  Created by scott on 2025/11/5.
 //
 
 import XCTest
 
-final class AstractConnectExampleUITestsLaunchTests: XCTestCase {
+final class ExampleUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

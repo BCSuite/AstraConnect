@@ -11,11 +11,11 @@ import Foundation
 /// If need decode non-basic decodable type, place it in a Map or Array. Can be used for dynamic usage scenario
 /// like one field has different value in different conditions.
 @propertyWrapper
-public struct ACDynamicCodation: Codable {
+public struct ACDynamicCodation: Codable, @unchecked Sendable {
     private static let decodeDebugDesc = "Cann't decode ACDynamicCodation"
     private static let encodeDebugDesc = "Cann't encode ACDynamicCodation"
 
-    public var wrappedValue: Any
+    public let wrappedValue: Any
     
     public init(_ wrappedValue: Any) {
         self.wrappedValue = wrappedValue
@@ -69,7 +69,8 @@ extension ACDynamicCodation  {
             return
         }
         
-        if #available(iOS 18, *) {
+        
+        if #available(iOS 18, macOS 15.0, *) {
             // Int128
             if let int128Val = try? container.decode(Int128.self) {
                 wrappedValue = int128Val

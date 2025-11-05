@@ -9,7 +9,7 @@
 import Foundation
 
 /// A model repsents commitment informations return by the getBlockCommitment RPC method.
-public struct ACSolanaCommitments: Codable {
+public struct ACSolanaCommitments: Codable, Sendable {
     
     /// Array of u64 integers logging the amount of cluster stake in lamports that has voted on the
     /// block at each depth from 0 to MAX_LOCKOUT_HISTORY.

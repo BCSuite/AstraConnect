@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents a Slot range for fetching block production.
-public struct ACSolanaSlotRange: Codable {
+public struct ACSolanaSlotRange: Codable, Sendable {
     
     /// The first slot to return block production information for (inclusive).
     public var firstSlot: UInt64

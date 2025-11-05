@@ -84,7 +84,7 @@ public enum ACSolanaGetBlock {
      */
     /// The model represents the result data structure within response from 'getBlock' RPC method. Deatails are shown as above.
     ///  The official  doc is  https://solana.com/docs/rpc/http/getblock
-    public struct BlockInfo: Codable {
+    public struct BlockInfo: Codable, Sendable {
         
         /// The number of blocks beneath this block.
         public var blockHeight: UInt64?
@@ -110,7 +110,7 @@ public enum ACSolanaGetBlock {
         ///   depending on encoding parameter.
         ///
         ///   meta: <object> - Transaction status metadata object or null.
-        public struct Transaction: Codable {
+        public struct Transaction: Codable, Sendable {
             
             /// Transaction object, either in JSON format or encoded binary data, depending on encoding parameter.
             public var transaction: ACDynamicCodation

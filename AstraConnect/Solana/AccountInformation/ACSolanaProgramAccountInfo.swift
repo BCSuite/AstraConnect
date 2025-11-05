@@ -8,7 +8,7 @@
 import Foundation
 
 /// A model represents account owned by the  given provided program.
-public struct ACSolanaProgramAccountInfo: Codable {
+public struct ACSolanaProgramAccountInfo: Codable, Sendable {
     
     /// The account Pubkey as base-58 encoded string.
     public var pubkey: String

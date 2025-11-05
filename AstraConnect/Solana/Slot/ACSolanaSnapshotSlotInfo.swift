@@ -13,7 +13,7 @@ import Foundation
  */
 /// A model represents the slot informations that the node has snapshots for.
 ///  The official doc is https://solana.com/docs/rpc/http/gethighestsnapshotslot.
-public struct ACSolanaSnapshotSlotInfo: Codable {
+public struct ACSolanaSnapshotSlotInfo: Codable, Sendable {
     
     /// The highest full snapshot slot.
     public var full: UInt64

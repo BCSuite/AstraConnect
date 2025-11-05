@@ -20,7 +20,7 @@ import Foundation
  */
 /// A model represents the statuses of a Signature.
 /// The official doc is https://solana.com/docs/rpc/http/getsignaturestatuses.
-public struct ACSolanaSignatureStatus: Codable {
+public struct ACSolanaSignatureStatus: Codable, Sendable {
     
     /// The slot the transaction was processed.
     public var slot: UInt64
