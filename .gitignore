@@ -1,8 +1,29 @@
-.DS_Store
-/.build
-/Packages
-xcuserdata/
+# Build, products, and DerivedData
+build/
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-.netrc
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+
+# Playgrounds
+*.playground/*
+!*.playground/Pages/*.swift
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+.swiftpm/xcode/
+
+# Xcode caches
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Misc
+.DS_Store
+*.log
