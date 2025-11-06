@@ -1,16 +1,29 @@
 ##                   
 
-[TOC]
+- [AstraConnect](#astraconnect)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Extention](#extention)
+- [Solana](#solana)
+
+
 
 ## **AstraConnect**
 
 AstraConnect is a universal blockchain RPC client designed for iOS applications, enabling seamless RPC interactions with major public blockchains. It offers extensive customization for data formats, encoding/decoding methods, communication protocols, and Request/Response structures, ensuring effortless extensibility to any blockchain network. With method-level access control, each RPC method can be independently configured for endpoint URL, data format, transmission method, and Request/Response schema. Solana is currently supported, with upcoming integration of EVM-compatible networks (including Base and BSC) and other leading blockchains.
 
-![iOS 14+](https://img.shields.io/badge/iOS-14%2B-blue) ![Swift 5.3+](https://img.shields.io/badge/Swift-5.3%2B-orange?logo=swift)
+![iOS 14+](https://img.shields.io/badge/iOS-14%2B-blue) ![Swift 5.3+](https://img.shields.io/badge/Swift-5.3%2B-orange?logo=swift) [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square) [![Platforms](https://img.shields.io/badge/Platforms-macOS_iOS-Green?style=flat-square)](https://img.shields.io/badge/Platforms-macOS_iOS-Green?style=flat-square)
 
 
 
 ## Installation
+
+### SPM
+
+```
+.package(url: "https://github.com/BCSuite/AstraConnect.git", from: "1.0.0")
+```
+
 
 
 
@@ -57,6 +70,9 @@ Now AstraConnect only supports `JSON`,  it needs to customize other data stream 
 
 
 
+
+
+
 ## Extention
 
 AstraConnect supports customize serverval functionalities:
@@ -78,6 +94,8 @@ AstraConnect supports customize serverval functionalities:
 - **Logger**:  supporting customizing any logger conforms to the `ACLoggable` protocol, now the default logger is `ACConsoleLogger ` which just outputs to the console.
 
   
+
+
 
 ## Solana
 
